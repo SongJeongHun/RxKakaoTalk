@@ -3,27 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A099070B337CEC81564E5984 /* Pods_RxKakaoTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271AD74775D954E34C4AE2A3 /* Pods_RxKakaoTalk.framework */; };
 		A70B29AA25A2F0D900A2B37D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B29A925A2F0D900A2B37D /* AppDelegate.swift */; };
 		A70B29AC25A2F0D900A2B37D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B29AB25A2F0D900A2B37D /* SceneDelegate.swift */; };
-		A70B29AE25A2F0D900A2B37D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B29AD25A2F0D900A2B37D /* ViewController.swift */; };
+		A70B29AE25A2F0D900A2B37D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B29AD25A2F0D900A2B37D /* LoginViewController.swift */; };
 		A70B29B125A2F0D900A2B37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70B29AF25A2F0D900A2B37D /* Main.storyboard */; };
 		A70B29B325A2F0DA00A2B37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70B29B225A2F0DA00A2B37D /* Assets.xcassets */; };
 		A70B29B625A2F0DA00A2B37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70B29B425A2F0DA00A2B37D /* LaunchScreen.storyboard */; };
+		A76CC18425A30C4500B8EEAA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76CC18325A30C4500B8EEAA /* LoginViewModel.swift */; };
+		A76CC18A25A30CBF00B8EEAA /* ViewControllerBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */; };
+		A7BA8E7325A2F362005F0F27 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA8E7225A2F362005F0F27 /* Scene.swift */; };
+		A7BA8E7625A2F371005F0F27 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA8E7525A2F371005F0F27 /* SceneCoordinator.swift */; };
+		A7BA8E7925A2F388005F0F27 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA8E7825A2F388005F0F27 /* SceneCoordinatorType.swift */; };
+		A7BA8E7C25A2F44A005F0F27 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA8E7B25A2F44A005F0F27 /* Friends.swift */; };
+		A7BA8E7F25A2F452005F0F27 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA8E7E25A2F452005F0F27 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271AD74775D954E34C4AE2A3 /* Pods_RxKakaoTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxKakaoTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74627AE71B06E2C1458CA80C /* Pods-RxKakaoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxKakaoTalk.release.xcconfig"; path = "Target Support Files/Pods-RxKakaoTalk/Pods-RxKakaoTalk.release.xcconfig"; sourceTree = "<group>"; };
 		A70B29A625A2F0D900A2B37D /* RxKakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxKakaoTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70B29A925A2F0D900A2B37D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A70B29AB25A2F0D900A2B37D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A70B29AD25A2F0D900A2B37D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A70B29AD25A2F0D900A2B37D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A70B29B025A2F0D900A2B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A70B29B225A2F0DA00A2B37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70B29B525A2F0DA00A2B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70B29B725A2F0DA00A2B37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A76CC18325A30C4500B8EEAA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBindableType.swift; sourceTree = "<group>"; };
+		A7BA8E7225A2F362005F0F27 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		A7BA8E7525A2F371005F0F27 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		A7BA8E7825A2F388005F0F27 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		A7BA8E7B25A2F44A005F0F27 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		A7BA8E7E25A2F452005F0F27 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E28EF8CF15AA5C45DA78AF6D /* Pods-RxKakaoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxKakaoTalk.debug.xcconfig"; path = "Target Support Files/Pods-RxKakaoTalk/Pods-RxKakaoTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A099070B337CEC81564E5984 /* Pods_RxKakaoTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01E9F17D57A863715275438D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E28EF8CF15AA5C45DA78AF6D /* Pods-RxKakaoTalk.debug.xcconfig */,
+				74627AE71B06E2C1458CA80C /* Pods-RxKakaoTalk.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9097A5ABB411C515716A6EBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				271AD74775D954E34C4AE2A3 /* Pods_RxKakaoTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A70B299D25A2F0D900A2B37D = {
 			isa = PBXGroup;
 			children = (
 				A70B29A825A2F0D900A2B37D /* RxKakaoTalk */,
 				A70B29A725A2F0D900A2B37D /* Products */,
+				01E9F17D57A863715275438D /* Pods */,
+				9097A5ABB411C515716A6EBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +94,54 @@
 		A70B29A825A2F0D900A2B37D /* RxKakaoTalk */ = {
 			isa = PBXGroup;
 			children = (
+				A7C9A7F125A2F198005E57BE /* ViewController */,
+				A7C9A7F025A2F194005E57BE /* Model */,
+				A7C9A7EF25A2F192005E57BE /* ViewModel */,
+				A7C9A7EE25A2F18E005E57BE /* Scene */,
 				A70B29A925A2F0D900A2B37D /* AppDelegate.swift */,
 				A70B29AB25A2F0D900A2B37D /* SceneDelegate.swift */,
-				A70B29AD25A2F0D900A2B37D /* ViewController.swift */,
-				A70B29AF25A2F0D900A2B37D /* Main.storyboard */,
 				A70B29B225A2F0DA00A2B37D /* Assets.xcassets */,
-				A70B29B425A2F0DA00A2B37D /* LaunchScreen.storyboard */,
 				A70B29B725A2F0DA00A2B37D /* Info.plist */,
 			);
 			path = RxKakaoTalk;
+			sourceTree = "<group>";
+		};
+		A7C9A7EE25A2F18E005E57BE /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A7BA8E7225A2F362005F0F27 /* Scene.swift */,
+				A7BA8E7525A2F371005F0F27 /* SceneCoordinator.swift */,
+				A7BA8E7825A2F388005F0F27 /* SceneCoordinatorType.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		A7C9A7EF25A2F192005E57BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A76CC18325A30C4500B8EEAA /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A7C9A7F025A2F194005E57BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7BA8E7B25A2F44A005F0F27 /* Friends.swift */,
+				A7BA8E7E25A2F452005F0F27 /* Message.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A7C9A7F125A2F198005E57BE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A70B29B425A2F0DA00A2B37D /* LaunchScreen.storyboard */,
+				A70B29AF25A2F0D900A2B37D /* Main.storyboard */,
+				A70B29AD25A2F0D900A2B37D /* LoginViewController.swift */,
+				A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A70B29BA25A2F0DA00A2B37D /* Build configuration list for PBXNativeTarget "RxKakaoTalk" */;
 			buildPhases = (
+				3A6C12961B99746F99103DFA /* [CP] Check Pods Manifest.lock */,
 				A70B29A225A2F0D900A2B37D /* Sources */,
 				A70B29A325A2F0D900A2B37D /* Frameworks */,
 				A70B29A425A2F0D900A2B37D /* Resources */,
+				DC91504D860BF0A930226EDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +211,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A6C12961B99746F99103DFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxKakaoTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC91504D860BF0A930226EDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxKakaoTalk/Pods-RxKakaoTalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxKakaoTalk/Pods-RxKakaoTalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxKakaoTalk/Pods-RxKakaoTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A70B29A225A2F0D900A2B37D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70B29AE25A2F0D900A2B37D /* ViewController.swift in Sources */,
+				A7BA8E7325A2F362005F0F27 /* Scene.swift in Sources */,
+				A7BA8E7C25A2F44A005F0F27 /* Friends.swift in Sources */,
+				A7BA8E7625A2F371005F0F27 /* SceneCoordinator.swift in Sources */,
+				A70B29AE25A2F0D900A2B37D /* LoginViewController.swift in Sources */,
 				A70B29AA25A2F0D900A2B37D /* AppDelegate.swift in Sources */,
+				A7BA8E7F25A2F452005F0F27 /* Message.swift in Sources */,
 				A70B29AC25A2F0D900A2B37D /* SceneDelegate.swift in Sources */,
+				A7BA8E7925A2F388005F0F27 /* SceneCoordinatorType.swift in Sources */,
+				A76CC18A25A30CBF00B8EEAA /* ViewControllerBindableType.swift in Sources */,
+				A76CC18425A30C4500B8EEAA /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +411,12 @@
 		};
 		A70B29BB25A2F0DA00A2B37D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E28EF8CF15AA5C45DA78AF6D /* Pods-RxKakaoTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RxKakaoTalk/RxKakaoTalk.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CH57QT784A;
 				INFOPLIST_FILE = RxKakaoTalk/Info.plist;
@@ -295,6 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JH.RxKakaoTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,9 +434,12 @@
 		};
 		A70B29BC25A2F0DA00A2B37D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74627AE71B06E2C1458CA80C /* Pods-RxKakaoTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RxKakaoTalk/RxKakaoTalk.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CH57QT784A;
 				INFOPLIST_FILE = RxKakaoTalk/Info.plist;
@@ -314,6 +449,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JH.RxKakaoTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

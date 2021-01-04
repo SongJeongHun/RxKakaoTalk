@@ -6,16 +6,17 @@
 //
 
 import UIKit
+import RxKakaoSDKCommon
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        RxKakaoSDKCommon.initSDK(appKey: "d0743c047005f9a628a6eb30a1e417b5")
         return true
     }
+ 
 
     // MARK: UISceneSession Lifecycle
 

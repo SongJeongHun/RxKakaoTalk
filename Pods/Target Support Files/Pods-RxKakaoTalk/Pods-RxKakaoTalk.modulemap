@@ -1,0 +1,6 @@
+framework module Pods_RxKakaoTalk {
+  umbrella header "Pods-RxKakaoTalk-umbrella.h"
+
+  export *
+  module * { export * }
+}
