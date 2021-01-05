@@ -28,12 +28,4 @@ class LoginViewModel:ViewModelType{
             return Observable.empty()
         }
     }
-    func userInfo(){
-        UserApi.shared.rx.me()
-            .subscribe(onSuccess:{ (user) in
-                if let userName = user.kakaoAccount?.profile?.nickname{
-                }
-            })
-            .disposed(by: self.rx.disposeBag)
-    }
 }
