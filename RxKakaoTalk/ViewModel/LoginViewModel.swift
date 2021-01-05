@@ -11,24 +11,29 @@ import Action
 import RxKakaoSDKAuth
 import RxKakaoSDKUser
 import KakaoSDKAuth
-class LoginViewModel{
-    let bag = DisposeBag()
+import KakaoSDKUser
+class LoginViewModel:ViewModelType{
     func loginAction() -> CocoaAction{
         return CocoaAction{_ in
             if(AuthApi.isKakaoTalkLoginAvailable()){
-                AuthApi.shared.rx.loginWithKakaoTalk()
+                AuthApi.shared.rx.loginWithKakaoAccount()
                     .subscribe(onNext:{token in
-                        print(token)
-                    },onError: {error in
-                        print(error)
-                    },onCompleted: {
-                        print("completed")
+                        let mainVM = MainViewModel(sceneCoordinator: self.sceneCoordinator)
+                        let mainScene = Scene.friendsList(mainVM)
+                        self.sceneCoordinator.transition(to: mainScene, using: .root, animated: true)
                     })
-                    .disposed(by: self.bag)
+                    .disposed(by:self.rx.disposeBag)
             }
+//            self.userInfo()
             return Observable.empty()
         }
-        
     }
-    
+    func userInfo(){
+        UserApi.shared.rx.me()
+            .subscribe(onSuccess:{ (user) in
+                if let userName = user.kakaoAccount?.profile?.nickname{
+                }
+            })
+            .disposed(by: self.rx.disposeBag)
+    }
 }

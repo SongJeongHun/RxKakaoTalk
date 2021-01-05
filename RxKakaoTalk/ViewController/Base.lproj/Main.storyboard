@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--채팅-->
         <scene sceneID="vds-Z1-sfl">
             <objects>
                 <viewController id="9vU-ry-FsP" sceneMemberID="viewController">
@@ -18,13 +18,13 @@
                         <viewLayoutGuide key="safeArea" id="bv9-jQ-DqN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="bubble.right.fill" catalog="system" id="urM-mg-jf6"/>
+                    <tabBarItem key="tabBarItem" title="채팅" image="bubble.left.fill" catalog="system" id="urM-mg-jf6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zA1-eF-oCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="350"/>
+            <point key="canvasLocation" x="625" y="447"/>
         </scene>
-        <!--Item 1-->
+        <!--친구-->
         <scene sceneID="0jL-sG-M0X">
             <objects>
                 <viewController id="ojw-R2-Heh" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                         <viewLayoutGuide key="safeArea" id="SpH-rd-rMs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="person.fill" catalog="system" id="eft-5i-jNF"/>
+                    <tabBarItem key="tabBarItem" title="친구" image="person.fill" catalog="system" id="eft-5i-jNF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x23-XS-JJt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,12 +43,20 @@
         <!--Login View Controller-->
         <scene sceneID="vlS-kD-3gb">
             <objects>
-                <viewController id="lOd-1Y-Boj" customClass="LoginViewController" customModule="RxKakaoTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="lOd-1Y-Boj" customClass="LoginViewController" customModule="RxKakaoTalk" customModuleProvider="target" colorLabel="IBBuiltInLabel-Orange" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="csK-5F-Ajh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WT-1g-AqZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F1C-SC-5qs">
+                                <rect key="frame" x="87" y="392.5" width="240" height="127.5"/>
+                                <color key="tintColor" red="0.093752376740000004" green="0.087143383919999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="49d-uV-H1t"/>
+                                    <constraint firstAttribute="width" constant="240" id="VdE-Yu-AF6"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WT-1g-AqZ">
                                 <rect key="frame" x="105" y="762" width="204" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="CBg-Ix-UsF"/>
@@ -61,12 +69,22 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="742-TE-RRK">
+                                <rect key="frame" x="181" y="424" width="52.5" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.99350160359999995" green="0.90392649169999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="967-fx-kvy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99350160359999995" green="0.90392649169999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="742-TE-RRK" firstAttribute="centerX" secondItem="csK-5F-Ajh" secondAttribute="centerX" id="6Dg-4R-Yeh"/>
+                            <constraint firstItem="F1C-SC-5qs" firstAttribute="centerY" secondItem="csK-5F-Ajh" secondAttribute="centerY" constant="8" id="GOZ-OM-syh"/>
+                            <constraint firstItem="742-TE-RRK" firstAttribute="centerY" secondItem="csK-5F-Ajh" secondAttribute="centerY" id="Hbt-eq-9rp"/>
                             <constraint firstItem="1WT-1g-AqZ" firstAttribute="leading" secondItem="967-fx-kvy" secondAttribute="leading" constant="105" id="QkV-xb-TeF"/>
                             <constraint firstItem="967-fx-kvy" firstAttribute="bottom" secondItem="1WT-1g-AqZ" secondAttribute="bottom" constant="50" id="Smc-DV-Ue2"/>
+                            <constraint firstItem="F1C-SC-5qs" firstAttribute="centerX" secondItem="csK-5F-Ajh" secondAttribute="centerX" id="msL-8X-Xr4"/>
                             <constraint firstItem="967-fx-kvy" firstAttribute="trailing" secondItem="1WT-1g-AqZ" secondAttribute="trailing" constant="105" id="uyU-tC-TqW"/>
                         </constraints>
                     </view>
@@ -78,18 +96,20 @@
             </objects>
             <point key="canvasLocation" x="-1255.072463768116" y="44.866071428571423"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="doH-E2-NF4">
             <objects>
-                <tabBarController id="d1f-LT-eex" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" id="d1f-LT-eex" customClass="MainViewController" customModule="RxKakaoTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WIY-eQ-Snz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2191653848" green="0.121638827" blue="0.1215664521" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ojw-R2-Heh" kind="relationship" relationship="viewControllers" id="LwO-Ob-i0W"/>
-                        <segue destination="9vU-ry-FsP" kind="relationship" relationship="viewControllers" id="AXc-cl-a2Q"/>
+                        <segue destination="ojw-R2-Heh" kind="relationship" relationship="viewControllers" id="Ou2-Oz-6T8"/>
+                        <segue destination="9vU-ry-FsP" kind="relationship" relationship="viewControllers" id="amP-U2-Wl2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uR8-ZU-W9E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -98,7 +118,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bubble.right.fill" catalog="system" width="128" height="110"/>
+        <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
         <image name="kakao_login_medium_narrow" width="91.5" height="22.5"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">

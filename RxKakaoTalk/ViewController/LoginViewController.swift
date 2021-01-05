@@ -14,8 +14,6 @@ class LoginViewController: UIViewController,ViewModelBindableType {
     var viewModel :LoginViewModel!
     @IBOutlet weak var loginButton:UIButton!
     override func viewDidLoad() {
-        viewModel = LoginViewModel()
-        bindViewModel()
         super.viewDidLoad()
     }
     func bindViewModel() {
