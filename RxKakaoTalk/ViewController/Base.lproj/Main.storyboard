@@ -11,7 +11,7 @@
         <!--채팅-->
         <scene sceneID="vds-Z1-sfl">
             <objects>
-                <viewController id="9vU-ry-FsP" customClass="MainViewController" customModule="RxKakaoTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9vU-ry-FsP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YJm-2g-RQa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,16 +27,16 @@
         <!--친구-->
         <scene sceneID="0jL-sG-M0X">
             <objects>
-                <viewController id="ojw-R2-Heh" customClass="MainViewController" customModule="RxKakaoTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ojw-R2-Heh" customClass="FriendsViewController" customModule="RxKakaoTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IL2-wh-180">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="km4-Of-dgm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="km4-Of-dgm">
                                 <rect key="frame" x="0.0" y="119" width="414" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sectionHeader" id="rMb-NC-s3g">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="sectionHeader" id="rMb-NC-s3g">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rMb-NC-s3g" id="7Jc-yR-utL">
@@ -124,7 +124,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="친구" image="person.fill" catalog="system" id="eft-5i-jNF"/>
                     <connections>
-                        <outlet property="tableView" destination="km4-Of-dgm" id="U3S-kF-9X2"/>
+                        <outlet property="tableView" destination="km4-Of-dgm" id="qwj-hv-REs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x23-XS-JJt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="-1255.072463768116" y="44.866071428571423"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="doH-E2-NF4">
             <objects>
-                <tabBarController storyboardIdentifier="Main" id="d1f-LT-eex" customClass="MainViewController" customModule="RxKakaoTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" id="d1f-LT-eex" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WIY-eQ-Snz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
