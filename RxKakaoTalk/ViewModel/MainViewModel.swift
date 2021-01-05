@@ -13,14 +13,16 @@ import NSObject_Rx
 import KakaoSDKTalk
 import RxKakaoSDKTalk
 class MainViewModel:ViewModelType{
-    private lazy var myProfile = PublishSubject<TalkProfile>()
+    lazy var myProfile = PublishSubject<String>()
     lazy var friendsList = PublishSubject<[Friend]>()
-    lazy var thumbNail = PublishSubject<[URL?]>()
+    lazy var test = PublishSubject<String>()
+    lazy var mythumbNail = PublishSubject<URL?>()
     func getProfile(){
         TalkApi.shared.rx.profile()
             .retryWhen(Auth.shared.rx.incrementalAuthorizationRequired())
             .subscribe (onSuccess:{ (profile) in
-                self.myProfile.onNext(profile)
+                self.myProfile.onNext(profile.nickname)
+               
             }, onError: {error in
                 print(error)
             })
@@ -33,7 +35,7 @@ class MainViewModel:ViewModelType{
             .subscribe (onSuccess:{ (friends) in
                 if let friend = friends.elements{
                     self.friendsList.onNext(friend)
-                   
+                    self.test.onNext(String(friend.count))
                 }
             }, onError: {error in
                 print(error)
