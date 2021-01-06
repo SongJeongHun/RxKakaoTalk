@@ -10,6 +10,7 @@ import RxSwift
 import KakaoSDKAuth
 import RxKakaoSDKAuth
 import NSObject_Rx
+import Action
 import KakaoSDKTalk
 import RxKakaoSDKTalk
 class MainViewModel:ViewModelType{
@@ -22,12 +23,10 @@ class MainViewModel:ViewModelType{
             .retryWhen(Auth.shared.rx.incrementalAuthorizationRequired())
             .subscribe (onSuccess:{ (profile) in
                 self.myProfile.onNext(profile.nickname)
-               
             }, onError: {error in
                 print(error)
             })
             .disposed(by: rx.disposeBag)
-        
     }
     func getFriendsList(){
         TalkApi.shared.rx.friends()
@@ -42,7 +41,11 @@ class MainViewModel:ViewModelType{
             })
             .disposed(by: rx.disposeBag)
     }
-
-   
-    
+    lazy var chattingAction:Action<Friend,Void> = {
+        return Action { friend in
+            let chattingViewModel = ChattingViewModel(friend: friend, sceneCoordinator: self.sceneCoordinator)
+            let chattingScene = Scene.chat(chattingViewModel)
+            return self.sceneCoordinator.transition(to: chattingScene, using: .root, animated: true).asObservable().map{_ in }
+        }
+    }()
 }

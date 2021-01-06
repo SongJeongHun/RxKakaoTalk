@@ -14,6 +14,8 @@
 		A70B29B125A2F0D900A2B37D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70B29AF25A2F0D900A2B37D /* Main.storyboard */; };
 		A70B29B325A2F0DA00A2B37D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70B29B225A2F0DA00A2B37D /* Assets.xcassets */; };
 		A70B29B625A2F0DA00A2B37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70B29B425A2F0DA00A2B37D /* LaunchScreen.storyboard */; };
+		A762057725A58C31006CBCA2 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762057625A58C31006CBCA2 /* ChattingViewController.swift */; };
+		A762058225A593DA006CBCA2 /* ChattingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762058125A593DA006CBCA2 /* ChattingViewModel.swift */; };
 		A76CC18425A30C4500B8EEAA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76CC18325A30C4500B8EEAA /* LoginViewModel.swift */; };
 		A76CC18A25A30CBF00B8EEAA /* ViewControllerBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */; };
 		A77F0D7625A421A300779FED /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77F0D7525A421A300779FED /* MainViewModel.swift */; };
@@ -38,6 +40,8 @@
 		A70B29B225A2F0DA00A2B37D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70B29B525A2F0DA00A2B37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70B29B725A2F0DA00A2B37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A762057625A58C31006CBCA2 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		A762058125A593DA006CBCA2 /* ChattingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewModel.swift; sourceTree = "<group>"; };
 		A76CC18325A30C4500B8EEAA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBindableType.swift; sourceTree = "<group>"; };
 		A77F0D7525A421A300779FED /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 		A70B29A825A2F0D900A2B37D /* RxKakaoTalk */ = {
 			isa = PBXGroup;
 			children = (
+				A762057425A58BD9006CBCA2 /* Service */,
 				A7C9A7F125A2F198005E57BE /* ViewController */,
 				A7C9A7EF25A2F192005E57BE /* ViewModel */,
 				A7C9A7EE25A2F18E005E57BE /* Scene */,
@@ -111,6 +116,23 @@
 				A70B29B725A2F0DA00A2B37D /* Info.plist */,
 			);
 			path = RxKakaoTalk;
+			sourceTree = "<group>";
+		};
+		A762057425A58BD9006CBCA2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A762057525A58BFE006CBCA2 /* MainTabVC */ = {
+			isa = PBXGroup;
+			children = (
+				A77F0D8925A425A100779FED /* MainViewController.swift */,
+				A77F0DAA25A464C600779FED /* FriendsViewController.swift */,
+				A77F0DAD25A464D000779FED /* ChatViewController.swift */,
+			);
+			path = MainTabVC;
 			sourceTree = "<group>";
 		};
 		A7C9A7EE25A2F18E005E57BE /* Scene */ = {
@@ -130,6 +152,7 @@
 				A76CC18325A30C4500B8EEAA /* LoginViewModel.swift */,
 				A77F0D7525A421A300779FED /* MainViewModel.swift */,
 				A77F0D8F25A435FE00779FED /* ViewModelType.swift */,
+				A762058125A593DA006CBCA2 /* ChattingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -137,13 +160,12 @@
 		A7C9A7F125A2F198005E57BE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A762057525A58BFE006CBCA2 /* MainTabVC */,
 				A70B29B425A2F0DA00A2B37D /* LaunchScreen.storyboard */,
 				A70B29AF25A2F0D900A2B37D /* Main.storyboard */,
 				A70B29AD25A2F0D900A2B37D /* LoginViewController.swift */,
+				A762057625A58C31006CBCA2 /* ChattingViewController.swift */,
 				A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */,
-				A77F0D8925A425A100779FED /* MainViewController.swift */,
-				A77F0DAA25A464C600779FED /* FriendsViewController.swift */,
-				A77F0DAD25A464D000779FED /* ChatViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -262,12 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A762058225A593DA006CBCA2 /* ChattingViewModel.swift in Sources */,
 				A7BA8E7325A2F362005F0F27 /* Scene.swift in Sources */,
 				A77F0DAB25A464C600779FED /* FriendsViewController.swift in Sources */,
 				A77F0DAE25A464D000779FED /* ChatViewController.swift in Sources */,
 				A77F0D7625A421A300779FED /* MainViewModel.swift in Sources */,
 				A77F0D7F25A422D000779FED /* TransitionStyle.swift in Sources */,
 				A7BA8E7625A2F371005F0F27 /* SceneCoordinator.swift in Sources */,
+				A762057725A58C31006CBCA2 /* ChattingViewController.swift in Sources */,
 				A70B29AE25A2F0D900A2B37D /* LoginViewController.swift in Sources */,
 				A77F0D9025A435FE00779FED /* ViewModelType.swift in Sources */,
 				A70B29AA25A2F0D900A2B37D /* AppDelegate.swift in Sources */,

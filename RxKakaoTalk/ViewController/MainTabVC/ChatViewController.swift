@@ -6,7 +6,12 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
+import NSObject_Rx
+import Action
+import KakaoSDKTalk
+import RxKakaoSDKTalk
 class ChatViewController: UIViewController,ViewModelBindableType {
     var viewModel:  MainViewModel!
     @IBOutlet weak var tableView:UITableView!
@@ -24,6 +29,13 @@ class ChatViewController: UIViewController,ViewModelBindableType {
                 let image = try! Data(contentsOf: url)
                 cell.thumbNail.setImage(UIImage(data: image), for: .normal)
             }
+            .disposed(by: rx.disposeBag)
+        Observable.zip(tableView.rx.modelSelected(Friend.self),tableView.rx.itemSelected)
+            .do(onNext:{[unowned self]_,row in
+            self.tableView.deselectRow(at: row, animated: false)
+        })
+            .map{$0.0}
+            .bind(to:viewModel.chattingAction.inputs)
             .disposed(by: rx.disposeBag)
     }
 }

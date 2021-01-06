@@ -10,6 +10,7 @@ import UIKit
 enum Scene{
     case friendsList(MainViewModel)
     case login(LoginViewModel)
+    case chat(ChattingViewModel)
 }
 extension Scene{
     func instantiate(from storyboard:String = "Main") -> UIViewController{
@@ -26,6 +27,10 @@ extension Scene{
             guard var loginVC = storyboard.instantiateViewController(identifier: "Login") as? LoginViewController else { fatalError() }
             loginVC.bind(viewModel: viewModel)
             return loginVC
+        case .chat(let viewModel):
+            guard var chattingVC = storyboard.instantiateViewController(identifier: "Chatting") as? ChattingViewController else { fatalError() }
+            chattingVC.bind(viewModel: viewModel)
+            return chattingVC
         }
     }
 }
