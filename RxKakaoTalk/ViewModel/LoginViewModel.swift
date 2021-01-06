@@ -19,6 +19,7 @@ class LoginViewModel:ViewModelType{
                 AuthApi.shared.rx.loginWithKakaoAccount()
                     .subscribe(onNext:{token in
                         let mainVM = MainViewModel(sceneCoordinator: self.sceneCoordinator)
+                       
                         let mainScene = Scene.friendsList(mainVM)
                         self.sceneCoordinator.transition(to: mainScene, using: .root, animated: true)
                     })
