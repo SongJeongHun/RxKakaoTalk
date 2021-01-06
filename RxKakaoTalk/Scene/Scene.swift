@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 enum Scene{
-    case friendsList(MainViewModel)
+    case main(MainViewModel)
     case login(LoginViewModel)
     case chat(ChattingViewModel)
 }
@@ -16,10 +16,11 @@ extension Scene{
     func instantiate(from storyboard:String = "Main") -> UIViewController{
         let storyboard = UIStoryboard(name: storyboard, bundle: nil)
         switch self{
-        case .friendsList(let mainviewModel):
+        case .main(let mainviewModel):
             guard var mainVC = storyboard.instantiateViewController(identifier:"Main") as? UITabBarController else { fatalError() }
             guard var friendsVC = mainVC.viewControllers?.first as? FriendsViewController else { fatalError() }
-            guard var chatVC = mainVC.viewControllers?.last as? ChatViewController else { fatalError() }
+            guard var chatNav = mainVC.viewControllers?.last as? UINavigationController else { fatalError() }
+            guard var chatVC = chatNav.viewControllers.first as? ChatViewController else { fatalError() }
             chatVC.bind(viewModel: mainviewModel)
             friendsVC.bind(viewModel: mainviewModel)
             return mainVC

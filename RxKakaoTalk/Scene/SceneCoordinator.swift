@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 extension UIViewController{
     var sceneViewController:UIViewController{
-        return self
+        return self.children.first ?? self
     }
 }
 class SceneCoordinator:SceneCoordinatorType{
@@ -30,12 +30,22 @@ class SceneCoordinator:SceneCoordinatorType{
             window.rootViewController = target
             subject.onCompleted()
 //        case .modal:
-//        case .push:
-
+        case .push:
+            guard let nav = currentVC.children.last as? UINavigationController else{
+                subject.onError(TransitionError.navigationControllerMissing)
+                break
+            }
+            nav.rx.willShow
+                .subscribe(onNext:{[unowned self]event in
+                    self.currentVC = event.viewController.sceneViewController
+                })
+                .disposed(by:bag )
+            nav.pushViewController(target, animated: animated)
+            currentVC = target.sceneViewController
+            subject.onCompleted()
         }
         return subject.ignoreElements()
     }
-    
     func close(animated: Bool) -> Completable {
         return Completable.create{[unowned self] com in
             if let presentingVC = self.currentVC.presentingViewController{

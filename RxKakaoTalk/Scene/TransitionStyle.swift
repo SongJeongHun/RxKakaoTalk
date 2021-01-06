@@ -8,7 +8,7 @@
 import Foundation
 enum TransitionStyle{
     case root
-//    case push
+    case push
 //    case modal
 }
 enum TransitionError:Error{

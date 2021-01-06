@@ -42,10 +42,11 @@ class MainViewModel:ViewModelType{
             .disposed(by: rx.disposeBag)
     }
     lazy var chattingAction:Action<Friend,Void> = {
+        print("chattingActionchattingActionchattingAction")
         return Action { friend in
             let chattingViewModel = ChattingViewModel(friend: friend, sceneCoordinator: self.sceneCoordinator)
             let chattingScene = Scene.chat(chattingViewModel)
-            return self.sceneCoordinator.transition(to: chattingScene, using: .root, animated: true).asObservable().map{_ in }
+            return self.sceneCoordinator.transition(to: chattingScene, using: .push, animated: true).asObservable().map{_ in }
         }
     }()
 }
