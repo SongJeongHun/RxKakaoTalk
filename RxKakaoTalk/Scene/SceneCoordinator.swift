@@ -31,13 +31,14 @@ class SceneCoordinator:SceneCoordinatorType{
             subject.onCompleted()
 //        case .modal:
         case .push:
+            print(currentVC)
             guard let nav = currentVC.children.last as? UINavigationController else{
                 subject.onError(TransitionError.navigationControllerMissing)
                 break
             }
             nav.rx.willShow
                 .subscribe(onNext:{[unowned self]event in
-                    self.currentVC = event.viewController.sceneViewController
+                    self.currentVC = event.viewController.parent!.parent!
                 })
                 .disposed(by:bag )
             nav.pushViewController(target, animated: animated)
