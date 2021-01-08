@@ -15,6 +15,10 @@ import RxKakaoSDKTalk
 class ChatViewController: UIViewController,ViewModelBindableType {
     var viewModel:  MainViewModel!
     @IBOutlet weak var tableView:UITableView!
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+    }
     override func viewDidLoad() {
         tableView.separatorStyle = .none
         super.viewDidLoad()
