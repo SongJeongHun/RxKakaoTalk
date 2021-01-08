@@ -14,5 +14,6 @@ target 'RxKakaoTalk' do
   pod 'RxKakaoSDKAuth'
   pod 'RxKakaoSDKUser'
   pod 'RxKakaoSDKTalk'
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 
 end

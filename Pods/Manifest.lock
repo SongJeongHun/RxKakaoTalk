@@ -46,6 +46,9 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
 
 DEPENDENCIES:
   - Action
@@ -56,6 +59,7 @@ DEPENDENCIES:
   - RxKakaoSDKTalk
   - RxKakaoSDKUser
   - RxSwift
+  - Socket.IO-Client-Swift (~> 15.2.0)
 
 SPEC REPOS:
   trunk:
@@ -75,6 +79,8 @@ SPEC REPOS:
     - RxKakaoSDKUser
     - RxRelay
     - RxSwift
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
   Action: 5dc2194f7a0b77857c82a677b0da655f197c005f
@@ -93,7 +99,9 @@ SPEC CHECKSUMS:
   RxKakaoSDKUser: 7503edc8eb50c8223dc4cd801f75ed208f481046
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: da941c12c4ea55bdf4f9ff38e176bcaf264df912
+PODFILE CHECKSUM: aae5650d7655d4dc95532ca8f798f20e941b9c2a
 
 COCOAPODS: 1.9.3

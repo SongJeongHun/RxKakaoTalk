@@ -127,7 +127,7 @@
             <objects>
                 <navigationController storyboardIdentifier="mainNav" id="84M-jS-Qlk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="채팅" selectedImage="bubble.left.fill" catalog="system" id="Pcz-3q-gS6"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6NE-Qp-E3C">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="6NE-Qp-E3C">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

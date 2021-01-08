@@ -29,6 +29,99 @@
 		A7BA8E7325A2F362005F0F27 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA8E7225A2F362005F0F27 /* Scene.swift */; };
 		A7BA8E7625A2F371005F0F27 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA8E7525A2F371005F0F27 /* SceneCoordinator.swift */; };
 		A7BA8E7925A2F388005F0F27 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA8E7825A2F388005F0F27 /* SceneCoordinatorType.swift */; };
+		A7D8BE7B25A8592E00CB8DA8 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE1A25A8592E00CB8DA8 /* test.js */; };
+		A7D8BE7C25A8592E00CB8DA8 /* run-test.sh in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE1B25A8592E00CB8DA8 /* run-test.sh */; };
+		A7D8BE7D25A8592E00CB8DA8 /* benchmark.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE1C25A8592E00CB8DA8 /* benchmark.js */; };
+		A7D8BE7E25A8592E00CB8DA8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE1D25A8592E00CB8DA8 /* README.md */; };
+		A7D8BE7F25A8592E00CB8DA8 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE1E25A8592E00CB8DA8 /* package.json */; };
+		A7D8BE8025A8592E00CB8DA8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2025A8592E00CB8DA8 /* README.md */; };
+		A7D8BE8125A8592E00CB8DA8 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2125A8592E00CB8DA8 /* LICENSE.txt */; };
+		A7D8BE8225A8592E00CB8DA8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2325A8592E00CB8DA8 /* LICENSE */; };
+		A7D8BE8325A8592E00CB8DA8 /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2525A8592E00CB8DA8 /* demo.js */; };
+		A7D8BE8425A8592E00CB8DA8 /* test-exceptions.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2725A8592E00CB8DA8 /* test-exceptions.js */; };
+		A7D8BE8525A8592E00CB8DA8 /* test-redirect-303.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2825A8592E00CB8DA8 /* test-redirect-303.js */; };
+		A7D8BE8625A8592E00CB8DA8 /* test-redirect-307.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2925A8592E00CB8DA8 /* test-redirect-307.js */; };
+		A7D8BE8725A8592E00CB8DA8 /* test-redirect-302.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2A25A8592E00CB8DA8 /* test-redirect-302.js */; };
+		A7D8BE8825A8592E00CB8DA8 /* testdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2B25A8592E00CB8DA8 /* testdata.txt */; };
+		A7D8BE8925A8592E00CB8DA8 /* test-request-methods.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2C25A8592E00CB8DA8 /* test-request-methods.js */; };
+		A7D8BE8A25A8592E00CB8DA8 /* test-request-protocols.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2D25A8592E00CB8DA8 /* test-request-protocols.js */; };
+		A7D8BE8B25A8592E00CB8DA8 /* test-constants.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2E25A8592E00CB8DA8 /* test-constants.js */; };
+		A7D8BE8C25A8592E00CB8DA8 /* test-events.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE2F25A8592E00CB8DA8 /* test-events.js */; };
+		A7D8BE8D25A8592E00CB8DA8 /* test-headers.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3025A8592E00CB8DA8 /* test-headers.js */; };
+		A7D8BE8E25A8592E00CB8DA8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3125A8592E00CB8DA8 /* README.md */; };
+		A7D8BE8F25A8592E00CB8DA8 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3225A8592E00CB8DA8 /* package.json */; };
+		A7D8BE9025A8592E00CB8DA8 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3325A8592E00CB8DA8 /* lib */; };
+		A7D8BE9125A8592E00CB8DA8 /* autotest.watchr in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3425A8592E00CB8DA8 /* autotest.watchr */; };
+		A7D8BE9225A8592E00CB8DA8 /* to-array in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3525A8592E00CB8DA8 /* to-array */; };
+		A7D8BE9325A8592E00CB8DA8 /* destroy in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3625A8592E00CB8DA8 /* destroy */; };
+		A7D8BE9425A8592E00CB8DA8 /* backo2 in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3725A8592E00CB8DA8 /* backo2 */; };
+		A7D8BE9525A8592E00CB8DA8 /* options in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3825A8592E00CB8DA8 /* options */; };
+		A7D8BE9625A8592E00CB8DA8 /* parseqs in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3925A8592E00CB8DA8 /* parseqs */; };
+		A7D8BE9725A8592E00CB8DA8 /* object-component in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3A25A8592E00CB8DA8 /* object-component */; };
+		A7D8BE9825A8592E00CB8DA8 /* ms in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3B25A8592E00CB8DA8 /* ms */; };
+		A7D8BE9925A8592E00CB8DA8 /* parsejson in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3C25A8592E00CB8DA8 /* parsejson */; };
+		A7D8BE9A25A8592E00CB8DA8 /* content-disposition in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3D25A8592E00CB8DA8 /* content-disposition */; };
+		A7D8BE9B25A8592E00CB8DA8 /* methods in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3E25A8592E00CB8DA8 /* methods */; };
+		A7D8BE9C25A8592E00CB8DA8 /* ultron in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE3F25A8592E00CB8DA8 /* ultron */; };
+		A7D8BE9D25A8592E00CB8DA8 /* proxy-addr in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4025A8592E00CB8DA8 /* proxy-addr */; };
+		A7D8BE9E25A8592E00CB8DA8 /* depd in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4125A8592E00CB8DA8 /* depd */; };
+		A7D8BE9F25A8592E00CB8DA8 /* range-parser in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4225A8592E00CB8DA8 /* range-parser */; };
+		A7D8BEA025A8592E00CB8DA8 /* utf8 in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4325A8592E00CB8DA8 /* utf8 */; };
+		A7D8BEA125A8592E00CB8DA8 /* express in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4425A8592E00CB8DA8 /* express */; };
+		A7D8BEA225A8592E00CB8DA8 /* parseuri in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4525A8592E00CB8DA8 /* parseuri */; };
+		A7D8BEA325A8592E00CB8DA8 /* merge-descriptors in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4625A8592E00CB8DA8 /* merge-descriptors */; };
+		A7D8BEA425A8592E00CB8DA8 /* socket.io-adapter in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4725A8592E00CB8DA8 /* socket.io-adapter */; };
+		A7D8BEA525A8592E00CB8DA8 /* engine.io-client in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4825A8592E00CB8DA8 /* engine.io-client */; };
+		A7D8BEA625A8592E00CB8DA8 /* ee-first in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4925A8592E00CB8DA8 /* ee-first */; };
+		A7D8BEA725A8592E00CB8DA8 /* socket.io-client in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4A25A8592E00CB8DA8 /* socket.io-client */; };
+		A7D8BEA825A8592E00CB8DA8 /* callsite in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4B25A8592E00CB8DA8 /* callsite */; };
+		A7D8BEA925A8592E00CB8DA8 /* crc in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4C25A8592E00CB8DA8 /* crc */; };
+		A7D8BEAA25A8592E00CB8DA8 /* fresh in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4D25A8592E00CB8DA8 /* fresh */; };
+		A7D8BEAB25A8592E00CB8DA8 /* qs in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4E25A8592E00CB8DA8 /* qs */; };
+		A7D8BEAC25A8592E00CB8DA8 /* path-to-regexp in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE4F25A8592E00CB8DA8 /* path-to-regexp */; };
+		A7D8BEAD25A8592E00CB8DA8 /* component-inherit in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5025A8592E00CB8DA8 /* component-inherit */; };
+		A7D8BEAE25A8592E00CB8DA8 /* mime-types in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5125A8592E00CB8DA8 /* mime-types */; };
+		A7D8BEAF25A8592E00CB8DA8 /* type-is in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5225A8592E00CB8DA8 /* type-is */; };
+		A7D8BEB025A8592E00CB8DA8 /* vary in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5325A8592E00CB8DA8 /* vary */; };
+		A7D8BEB125A8592E00CB8DA8 /* base64-arraybuffer in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5425A8592E00CB8DA8 /* base64-arraybuffer */; };
+		A7D8BEB225A8592E00CB8DA8 /* arraybuffer.slice in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5525A8592E00CB8DA8 /* arraybuffer.slice */; };
+		A7D8BEB325A8592E00CB8DA8 /* accepts in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5625A8592E00CB8DA8 /* accepts */; };
+		A7D8BEB425A8592E00CB8DA8 /* socket.io in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5725A8592E00CB8DA8 /* socket.io */; };
+		A7D8BEB525A8592E00CB8DA8 /* cookie-signature in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5825A8592E00CB8DA8 /* cookie-signature */; };
+		A7D8BEB625A8592E00CB8DA8 /* forwarded in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5925A8592E00CB8DA8 /* forwarded */; };
+		A7D8BEB725A8592E00CB8DA8 /* negotiator in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5A25A8592E00CB8DA8 /* negotiator */; };
+		A7D8BEB825A8592E00CB8DA8 /* utils-merge in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5B25A8592E00CB8DA8 /* utils-merge */; };
+		A7D8BEB925A8592E00CB8DA8 /* serve-static in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5C25A8592E00CB8DA8 /* serve-static */; };
+		A7D8BEBA25A8592E00CB8DA8 /* better-assert in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5D25A8592E00CB8DA8 /* better-assert */; };
+		A7D8BEBB25A8592E00CB8DA8 /* json3 in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5E25A8592E00CB8DA8 /* json3 */; };
+		A7D8BEBC25A8592E00CB8DA8 /* mime in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE5F25A8592E00CB8DA8 /* mime */; };
+		A7D8BEBD25A8592E00CB8DA8 /* engine.io-parser in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6025A8592E00CB8DA8 /* engine.io-parser */; };
+		A7D8BEBE25A8592E00CB8DA8 /* ipaddr.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6125A8592E00CB8DA8 /* ipaddr.js */; };
+		A7D8BEBF25A8592E00CB8DA8 /* cookie in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6225A8592E00CB8DA8 /* cookie */; };
+		A7D8BEC025A8592E00CB8DA8 /* has-cors in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6325A8592E00CB8DA8 /* has-cors */; };
+		A7D8BEC125A8592E00CB8DA8 /* socket.io-parser in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6425A8592E00CB8DA8 /* socket.io-parser */; };
+		A7D8BEC225A8592E00CB8DA8 /* after in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6525A8592E00CB8DA8 /* after */; };
+		A7D8BEC325A8592E00CB8DA8 /* base64id in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6625A8592E00CB8DA8 /* base64id */; };
+		A7D8BEC425A8592E00CB8DA8 /* escape-html in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6725A8592E00CB8DA8 /* escape-html */; };
+		A7D8BEC525A8592E00CB8DA8 /* engine.io in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6825A8592E00CB8DA8 /* engine.io */; };
+		A7D8BEC625A8592E00CB8DA8 /* component-bind in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6925A8592E00CB8DA8 /* component-bind */; };
+		A7D8BEC725A8592E00CB8DA8 /* parseurl in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6A25A8592E00CB8DA8 /* parseurl */; };
+		A7D8BEC825A8592E00CB8DA8 /* etag in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6B25A8592E00CB8DA8 /* etag */; };
+		A7D8BEC925A8592E00CB8DA8 /* component-emitter in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6C25A8592E00CB8DA8 /* component-emitter */; };
+		A7D8BECA25A8592E00CB8DA8 /* isarray in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6D25A8592E00CB8DA8 /* isarray */; };
+		A7D8BECB25A8592E00CB8DA8 /* send in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6E25A8592E00CB8DA8 /* send */; };
+		A7D8BECC25A8592E00CB8DA8 /* blob in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE6F25A8592E00CB8DA8 /* blob */; };
+		A7D8BECD25A8592E00CB8DA8 /* finalhandler in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7025A8592E00CB8DA8 /* finalhandler */; };
+		A7D8BECE25A8592E00CB8DA8 /* has-binary in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7125A8592E00CB8DA8 /* has-binary */; };
+		A7D8BECF25A8592E00CB8DA8 /* yeast in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7225A8592E00CB8DA8 /* yeast */; };
+		A7D8BED025A8592E00CB8DA8 /* on-finished in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7325A8592E00CB8DA8 /* on-finished */; };
+		A7D8BED125A8592E00CB8DA8 /* ws in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7425A8592E00CB8DA8 /* ws */; };
+		A7D8BED225A8592E00CB8DA8 /* debug in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7525A8592E00CB8DA8 /* debug */; };
+		A7D8BED325A8592E00CB8DA8 /* media-typer in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7625A8592E00CB8DA8 /* media-typer */; };
+		A7D8BED425A8592E00CB8DA8 /* mime-db in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7725A8592E00CB8DA8 /* mime-db */; };
+		A7D8BED525A8592E00CB8DA8 /* indexof in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7825A8592E00CB8DA8 /* indexof */; };
+		A7D8BED625A8592E00CB8DA8 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7925A8592E00CB8DA8 /* index.js */; };
+		A7D8BED725A8592E00CB8DA8 /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = A7D8BE7A25A8592E00CB8DA8 /* package.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +150,99 @@
 		A7BA8E7225A2F362005F0F27 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		A7BA8E7525A2F371005F0F27 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		A7BA8E7825A2F388005F0F27 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		A7D8BE1A25A8592E00CB8DA8 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
+		A7D8BE1B25A8592E00CB8DA8 /* run-test.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "run-test.sh"; sourceTree = "<group>"; };
+		A7D8BE1C25A8592E00CB8DA8 /* benchmark.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = benchmark.js; sourceTree = "<group>"; };
+		A7D8BE1D25A8592E00CB8DA8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A7D8BE1E25A8592E00CB8DA8 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		A7D8BE2025A8592E00CB8DA8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A7D8BE2125A8592E00CB8DA8 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		A7D8BE2325A8592E00CB8DA8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A7D8BE2525A8592E00CB8DA8 /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
+		A7D8BE2725A8592E00CB8DA8 /* test-exceptions.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-exceptions.js"; sourceTree = "<group>"; };
+		A7D8BE2825A8592E00CB8DA8 /* test-redirect-303.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-redirect-303.js"; sourceTree = "<group>"; };
+		A7D8BE2925A8592E00CB8DA8 /* test-redirect-307.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-redirect-307.js"; sourceTree = "<group>"; };
+		A7D8BE2A25A8592E00CB8DA8 /* test-redirect-302.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-redirect-302.js"; sourceTree = "<group>"; };
+		A7D8BE2B25A8592E00CB8DA8 /* testdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testdata.txt; sourceTree = "<group>"; };
+		A7D8BE2C25A8592E00CB8DA8 /* test-request-methods.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-request-methods.js"; sourceTree = "<group>"; };
+		A7D8BE2D25A8592E00CB8DA8 /* test-request-protocols.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-request-protocols.js"; sourceTree = "<group>"; };
+		A7D8BE2E25A8592E00CB8DA8 /* test-constants.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-constants.js"; sourceTree = "<group>"; };
+		A7D8BE2F25A8592E00CB8DA8 /* test-events.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-events.js"; sourceTree = "<group>"; };
+		A7D8BE3025A8592E00CB8DA8 /* test-headers.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "test-headers.js"; sourceTree = "<group>"; };
+		A7D8BE3125A8592E00CB8DA8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A7D8BE3225A8592E00CB8DA8 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		A7D8BE3325A8592E00CB8DA8 /* lib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lib; sourceTree = "<group>"; };
+		A7D8BE3425A8592E00CB8DA8 /* autotest.watchr */ = {isa = PBXFileReference; lastKnownFileType = file; path = autotest.watchr; sourceTree = "<group>"; };
+		A7D8BE3525A8592E00CB8DA8 /* to-array */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "to-array"; sourceTree = "<group>"; };
+		A7D8BE3625A8592E00CB8DA8 /* destroy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = destroy; sourceTree = "<group>"; };
+		A7D8BE3725A8592E00CB8DA8 /* backo2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = backo2; sourceTree = "<group>"; };
+		A7D8BE3825A8592E00CB8DA8 /* options */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = options; sourceTree = "<group>"; };
+		A7D8BE3925A8592E00CB8DA8 /* parseqs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parseqs; sourceTree = "<group>"; };
+		A7D8BE3A25A8592E00CB8DA8 /* object-component */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "object-component"; sourceTree = "<group>"; };
+		A7D8BE3B25A8592E00CB8DA8 /* ms */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ms; sourceTree = "<group>"; };
+		A7D8BE3C25A8592E00CB8DA8 /* parsejson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parsejson; sourceTree = "<group>"; };
+		A7D8BE3D25A8592E00CB8DA8 /* content-disposition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "content-disposition"; sourceTree = "<group>"; };
+		A7D8BE3E25A8592E00CB8DA8 /* methods */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = methods; sourceTree = "<group>"; };
+		A7D8BE3F25A8592E00CB8DA8 /* ultron */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ultron; sourceTree = "<group>"; };
+		A7D8BE4025A8592E00CB8DA8 /* proxy-addr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "proxy-addr"; sourceTree = "<group>"; };
+		A7D8BE4125A8592E00CB8DA8 /* depd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = depd; sourceTree = "<group>"; };
+		A7D8BE4225A8592E00CB8DA8 /* range-parser */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "range-parser"; sourceTree = "<group>"; };
+		A7D8BE4325A8592E00CB8DA8 /* utf8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = utf8; sourceTree = "<group>"; };
+		A7D8BE4425A8592E00CB8DA8 /* express */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = express; sourceTree = "<group>"; };
+		A7D8BE4525A8592E00CB8DA8 /* parseuri */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parseuri; sourceTree = "<group>"; };
+		A7D8BE4625A8592E00CB8DA8 /* merge-descriptors */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "merge-descriptors"; sourceTree = "<group>"; };
+		A7D8BE4725A8592E00CB8DA8 /* socket.io-adapter */ = {isa = PBXFileReference; lastKnownFileType = file; path = "socket.io-adapter"; sourceTree = "<group>"; };
+		A7D8BE4825A8592E00CB8DA8 /* engine.io-client */ = {isa = PBXFileReference; lastKnownFileType = file; path = "engine.io-client"; sourceTree = "<group>"; };
+		A7D8BE4925A8592E00CB8DA8 /* ee-first */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ee-first"; sourceTree = "<group>"; };
+		A7D8BE4A25A8592E00CB8DA8 /* socket.io-client */ = {isa = PBXFileReference; lastKnownFileType = file; path = "socket.io-client"; sourceTree = "<group>"; };
+		A7D8BE4B25A8592E00CB8DA8 /* callsite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = callsite; sourceTree = "<group>"; };
+		A7D8BE4C25A8592E00CB8DA8 /* crc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crc; sourceTree = "<group>"; };
+		A7D8BE4D25A8592E00CB8DA8 /* fresh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fresh; sourceTree = "<group>"; };
+		A7D8BE4E25A8592E00CB8DA8 /* qs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qs; sourceTree = "<group>"; };
+		A7D8BE4F25A8592E00CB8DA8 /* path-to-regexp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "path-to-regexp"; sourceTree = "<group>"; };
+		A7D8BE5025A8592E00CB8DA8 /* component-inherit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "component-inherit"; sourceTree = "<group>"; };
+		A7D8BE5125A8592E00CB8DA8 /* mime-types */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mime-types"; sourceTree = "<group>"; };
+		A7D8BE5225A8592E00CB8DA8 /* type-is */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "type-is"; sourceTree = "<group>"; };
+		A7D8BE5325A8592E00CB8DA8 /* vary */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vary; sourceTree = "<group>"; };
+		A7D8BE5425A8592E00CB8DA8 /* base64-arraybuffer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "base64-arraybuffer"; sourceTree = "<group>"; };
+		A7D8BE5525A8592E00CB8DA8 /* arraybuffer.slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = arraybuffer.slice; sourceTree = "<group>"; };
+		A7D8BE5625A8592E00CB8DA8 /* accepts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = accepts; sourceTree = "<group>"; };
+		A7D8BE5725A8592E00CB8DA8 /* socket.io */ = {isa = PBXFileReference; lastKnownFileType = file; path = socket.io; sourceTree = "<group>"; };
+		A7D8BE5825A8592E00CB8DA8 /* cookie-signature */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cookie-signature"; sourceTree = "<group>"; };
+		A7D8BE5925A8592E00CB8DA8 /* forwarded */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = forwarded; sourceTree = "<group>"; };
+		A7D8BE5A25A8592E00CB8DA8 /* negotiator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = negotiator; sourceTree = "<group>"; };
+		A7D8BE5B25A8592E00CB8DA8 /* utils-merge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "utils-merge"; sourceTree = "<group>"; };
+		A7D8BE5C25A8592E00CB8DA8 /* serve-static */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "serve-static"; sourceTree = "<group>"; };
+		A7D8BE5D25A8592E00CB8DA8 /* better-assert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "better-assert"; sourceTree = "<group>"; };
+		A7D8BE5E25A8592E00CB8DA8 /* json3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json3; sourceTree = "<group>"; };
+		A7D8BE5F25A8592E00CB8DA8 /* mime */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mime; sourceTree = "<group>"; };
+		A7D8BE6025A8592E00CB8DA8 /* engine.io-parser */ = {isa = PBXFileReference; lastKnownFileType = file; path = "engine.io-parser"; sourceTree = "<group>"; };
+		A7D8BE6125A8592E00CB8DA8 /* ipaddr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ipaddr.js; sourceTree = "<group>"; };
+		A7D8BE6225A8592E00CB8DA8 /* cookie */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cookie; sourceTree = "<group>"; };
+		A7D8BE6325A8592E00CB8DA8 /* has-cors */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "has-cors"; sourceTree = "<group>"; };
+		A7D8BE6425A8592E00CB8DA8 /* socket.io-parser */ = {isa = PBXFileReference; lastKnownFileType = file; path = "socket.io-parser"; sourceTree = "<group>"; };
+		A7D8BE6525A8592E00CB8DA8 /* after */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = after; sourceTree = "<group>"; };
+		A7D8BE6625A8592E00CB8DA8 /* base64id */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = base64id; sourceTree = "<group>"; };
+		A7D8BE6725A8592E00CB8DA8 /* escape-html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "escape-html"; sourceTree = "<group>"; };
+		A7D8BE6825A8592E00CB8DA8 /* engine.io */ = {isa = PBXFileReference; lastKnownFileType = file; path = engine.io; sourceTree = "<group>"; };
+		A7D8BE6925A8592E00CB8DA8 /* component-bind */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "component-bind"; sourceTree = "<group>"; };
+		A7D8BE6A25A8592E00CB8DA8 /* parseurl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parseurl; sourceTree = "<group>"; };
+		A7D8BE6B25A8592E00CB8DA8 /* etag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = etag; sourceTree = "<group>"; };
+		A7D8BE6C25A8592E00CB8DA8 /* component-emitter */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "component-emitter"; sourceTree = "<group>"; };
+		A7D8BE6D25A8592E00CB8DA8 /* isarray */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = isarray; sourceTree = "<group>"; };
+		A7D8BE6E25A8592E00CB8DA8 /* send */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = send; sourceTree = "<group>"; };
+		A7D8BE6F25A8592E00CB8DA8 /* blob */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blob; sourceTree = "<group>"; };
+		A7D8BE7025A8592E00CB8DA8 /* finalhandler */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = finalhandler; sourceTree = "<group>"; };
+		A7D8BE7125A8592E00CB8DA8 /* has-binary */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "has-binary"; sourceTree = "<group>"; };
+		A7D8BE7225A8592E00CB8DA8 /* yeast */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yeast; sourceTree = "<group>"; };
+		A7D8BE7325A8592E00CB8DA8 /* on-finished */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "on-finished"; sourceTree = "<group>"; };
+		A7D8BE7425A8592E00CB8DA8 /* ws */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ws; sourceTree = "<group>"; };
+		A7D8BE7525A8592E00CB8DA8 /* debug */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = debug; sourceTree = "<group>"; };
+		A7D8BE7625A8592E00CB8DA8 /* media-typer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "media-typer"; sourceTree = "<group>"; };
+		A7D8BE7725A8592E00CB8DA8 /* mime-db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mime-db"; sourceTree = "<group>"; };
+		A7D8BE7825A8592E00CB8DA8 /* indexof */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = indexof; sourceTree = "<group>"; };
+		A7D8BE7925A8592E00CB8DA8 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		A7D8BE7A25A8592E00CB8DA8 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
 		E28EF8CF15AA5C45DA78AF6D /* Pods-RxKakaoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxKakaoTalk.debug.xcconfig"; path = "Target Support Files/Pods-RxKakaoTalk/Pods-RxKakaoTalk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +311,7 @@
 		A762057425A58BD9006CBCA2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A7D8BE1525A8592300CB8DA8 /* Server */,
 				A762058425A5BECF006CBCA2 /* Chat.swift */,
 				A762058725A5BEF4006CBCA2 /* ChatType.swift */,
 			);
@@ -174,6 +361,170 @@
 				A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A7D8BE1525A8592300CB8DA8 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE1625A8592E00CB8DA8 /* SocketServer */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		A7D8BE1625A8592E00CB8DA8 /* SocketServer */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE1725A8592E00CB8DA8 /* node_modules */,
+				A7D8BE7925A8592E00CB8DA8 /* index.js */,
+				A7D8BE7A25A8592E00CB8DA8 /* package.json */,
+			);
+			path = SocketServer;
+			sourceTree = "<group>";
+		};
+		A7D8BE1725A8592E00CB8DA8 /* node_modules */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE1825A8592E00CB8DA8 /* benchmark */,
+				A7D8BE2225A8592E00CB8DA8 /* xmlhttprequest-ssl */,
+				A7D8BE3525A8592E00CB8DA8 /* to-array */,
+				A7D8BE3625A8592E00CB8DA8 /* destroy */,
+				A7D8BE3725A8592E00CB8DA8 /* backo2 */,
+				A7D8BE3825A8592E00CB8DA8 /* options */,
+				A7D8BE3925A8592E00CB8DA8 /* parseqs */,
+				A7D8BE3A25A8592E00CB8DA8 /* object-component */,
+				A7D8BE3B25A8592E00CB8DA8 /* ms */,
+				A7D8BE3C25A8592E00CB8DA8 /* parsejson */,
+				A7D8BE3D25A8592E00CB8DA8 /* content-disposition */,
+				A7D8BE3E25A8592E00CB8DA8 /* methods */,
+				A7D8BE3F25A8592E00CB8DA8 /* ultron */,
+				A7D8BE4025A8592E00CB8DA8 /* proxy-addr */,
+				A7D8BE4125A8592E00CB8DA8 /* depd */,
+				A7D8BE4225A8592E00CB8DA8 /* range-parser */,
+				A7D8BE4325A8592E00CB8DA8 /* utf8 */,
+				A7D8BE4425A8592E00CB8DA8 /* express */,
+				A7D8BE4525A8592E00CB8DA8 /* parseuri */,
+				A7D8BE4625A8592E00CB8DA8 /* merge-descriptors */,
+				A7D8BE4725A8592E00CB8DA8 /* socket.io-adapter */,
+				A7D8BE4825A8592E00CB8DA8 /* engine.io-client */,
+				A7D8BE4925A8592E00CB8DA8 /* ee-first */,
+				A7D8BE4A25A8592E00CB8DA8 /* socket.io-client */,
+				A7D8BE4B25A8592E00CB8DA8 /* callsite */,
+				A7D8BE4C25A8592E00CB8DA8 /* crc */,
+				A7D8BE4D25A8592E00CB8DA8 /* fresh */,
+				A7D8BE4E25A8592E00CB8DA8 /* qs */,
+				A7D8BE4F25A8592E00CB8DA8 /* path-to-regexp */,
+				A7D8BE5025A8592E00CB8DA8 /* component-inherit */,
+				A7D8BE5125A8592E00CB8DA8 /* mime-types */,
+				A7D8BE5225A8592E00CB8DA8 /* type-is */,
+				A7D8BE5325A8592E00CB8DA8 /* vary */,
+				A7D8BE5425A8592E00CB8DA8 /* base64-arraybuffer */,
+				A7D8BE5525A8592E00CB8DA8 /* arraybuffer.slice */,
+				A7D8BE5625A8592E00CB8DA8 /* accepts */,
+				A7D8BE5725A8592E00CB8DA8 /* socket.io */,
+				A7D8BE5825A8592E00CB8DA8 /* cookie-signature */,
+				A7D8BE5925A8592E00CB8DA8 /* forwarded */,
+				A7D8BE5A25A8592E00CB8DA8 /* negotiator */,
+				A7D8BE5B25A8592E00CB8DA8 /* utils-merge */,
+				A7D8BE5C25A8592E00CB8DA8 /* serve-static */,
+				A7D8BE5D25A8592E00CB8DA8 /* better-assert */,
+				A7D8BE5E25A8592E00CB8DA8 /* json3 */,
+				A7D8BE5F25A8592E00CB8DA8 /* mime */,
+				A7D8BE6025A8592E00CB8DA8 /* engine.io-parser */,
+				A7D8BE6125A8592E00CB8DA8 /* ipaddr.js */,
+				A7D8BE6225A8592E00CB8DA8 /* cookie */,
+				A7D8BE6325A8592E00CB8DA8 /* has-cors */,
+				A7D8BE6425A8592E00CB8DA8 /* socket.io-parser */,
+				A7D8BE6525A8592E00CB8DA8 /* after */,
+				A7D8BE6625A8592E00CB8DA8 /* base64id */,
+				A7D8BE6725A8592E00CB8DA8 /* escape-html */,
+				A7D8BE6825A8592E00CB8DA8 /* engine.io */,
+				A7D8BE6925A8592E00CB8DA8 /* component-bind */,
+				A7D8BE6A25A8592E00CB8DA8 /* parseurl */,
+				A7D8BE6B25A8592E00CB8DA8 /* etag */,
+				A7D8BE6C25A8592E00CB8DA8 /* component-emitter */,
+				A7D8BE6D25A8592E00CB8DA8 /* isarray */,
+				A7D8BE6E25A8592E00CB8DA8 /* send */,
+				A7D8BE6F25A8592E00CB8DA8 /* blob */,
+				A7D8BE7025A8592E00CB8DA8 /* finalhandler */,
+				A7D8BE7125A8592E00CB8DA8 /* has-binary */,
+				A7D8BE7225A8592E00CB8DA8 /* yeast */,
+				A7D8BE7325A8592E00CB8DA8 /* on-finished */,
+				A7D8BE7425A8592E00CB8DA8 /* ws */,
+				A7D8BE7525A8592E00CB8DA8 /* debug */,
+				A7D8BE7625A8592E00CB8DA8 /* media-typer */,
+				A7D8BE7725A8592E00CB8DA8 /* mime-db */,
+				A7D8BE7825A8592E00CB8DA8 /* indexof */,
+			);
+			path = node_modules;
+			sourceTree = "<group>";
+		};
+		A7D8BE1825A8592E00CB8DA8 /* benchmark */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE1925A8592E00CB8DA8 /* test */,
+				A7D8BE1C25A8592E00CB8DA8 /* benchmark.js */,
+				A7D8BE1D25A8592E00CB8DA8 /* README.md */,
+				A7D8BE1E25A8592E00CB8DA8 /* package.json */,
+				A7D8BE1F25A8592E00CB8DA8 /* doc */,
+				A7D8BE2125A8592E00CB8DA8 /* LICENSE.txt */,
+			);
+			path = benchmark;
+			sourceTree = "<group>";
+		};
+		A7D8BE1925A8592E00CB8DA8 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE1A25A8592E00CB8DA8 /* test.js */,
+				A7D8BE1B25A8592E00CB8DA8 /* run-test.sh */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		A7D8BE1F25A8592E00CB8DA8 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE2025A8592E00CB8DA8 /* README.md */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		A7D8BE2225A8592E00CB8DA8 /* xmlhttprequest-ssl */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE2325A8592E00CB8DA8 /* LICENSE */,
+				A7D8BE2425A8592E00CB8DA8 /* example */,
+				A7D8BE2625A8592E00CB8DA8 /* tests */,
+				A7D8BE3125A8592E00CB8DA8 /* README.md */,
+				A7D8BE3225A8592E00CB8DA8 /* package.json */,
+				A7D8BE3325A8592E00CB8DA8 /* lib */,
+				A7D8BE3425A8592E00CB8DA8 /* autotest.watchr */,
+			);
+			path = "xmlhttprequest-ssl";
+			sourceTree = "<group>";
+		};
+		A7D8BE2425A8592E00CB8DA8 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE2525A8592E00CB8DA8 /* demo.js */,
+			);
+			path = example;
+			sourceTree = "<group>";
+		};
+		A7D8BE2625A8592E00CB8DA8 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8BE2725A8592E00CB8DA8 /* test-exceptions.js */,
+				A7D8BE2825A8592E00CB8DA8 /* test-redirect-303.js */,
+				A7D8BE2925A8592E00CB8DA8 /* test-redirect-307.js */,
+				A7D8BE2A25A8592E00CB8DA8 /* test-redirect-302.js */,
+				A7D8BE2B25A8592E00CB8DA8 /* testdata.txt */,
+				A7D8BE2C25A8592E00CB8DA8 /* test-request-methods.js */,
+				A7D8BE2D25A8592E00CB8DA8 /* test-request-protocols.js */,
+				A7D8BE2E25A8592E00CB8DA8 /* test-constants.js */,
+				A7D8BE2F25A8592E00CB8DA8 /* test-events.js */,
+				A7D8BE3025A8592E00CB8DA8 /* test-headers.js */,
+			);
+			path = tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +586,102 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D8BEA525A8592E00CB8DA8 /* engine.io-client in Resources */,
+				A7D8BEB225A8592E00CB8DA8 /* arraybuffer.slice in Resources */,
+				A7D8BEA325A8592E00CB8DA8 /* merge-descriptors in Resources */,
+				A7D8BEA625A8592E00CB8DA8 /* ee-first in Resources */,
+				A7D8BE8725A8592E00CB8DA8 /* test-redirect-302.js in Resources */,
+				A7D8BEAC25A8592E00CB8DA8 /* path-to-regexp in Resources */,
+				A7D8BED425A8592E00CB8DA8 /* mime-db in Resources */,
+				A7D8BEB725A8592E00CB8DA8 /* negotiator in Resources */,
+				A7D8BEAE25A8592E00CB8DA8 /* mime-types in Resources */,
+				A7D8BECD25A8592E00CB8DA8 /* finalhandler in Resources */,
+				A7D8BE9125A8592E00CB8DA8 /* autotest.watchr in Resources */,
+				A7D8BE8C25A8592E00CB8DA8 /* test-events.js in Resources */,
+				A7D8BECF25A8592E00CB8DA8 /* yeast in Resources */,
+				A7D8BE7F25A8592E00CB8DA8 /* package.json in Resources */,
+				A7D8BEA825A8592E00CB8DA8 /* callsite in Resources */,
+				A7D8BEAF25A8592E00CB8DA8 /* type-is in Resources */,
+				A7D8BE8425A8592E00CB8DA8 /* test-exceptions.js in Resources */,
+				A7D8BE9425A8592E00CB8DA8 /* backo2 in Resources */,
+				A7D8BEAB25A8592E00CB8DA8 /* qs in Resources */,
+				A7D8BE9325A8592E00CB8DA8 /* destroy in Resources */,
+				A7D8BECC25A8592E00CB8DA8 /* blob in Resources */,
+				A7D8BED125A8592E00CB8DA8 /* ws in Resources */,
+				A7D8BEC425A8592E00CB8DA8 /* escape-html in Resources */,
+				A7D8BE9725A8592E00CB8DA8 /* object-component in Resources */,
+				A7D8BEA225A8592E00CB8DA8 /* parseuri in Resources */,
+				A7D8BE9925A8592E00CB8DA8 /* parsejson in Resources */,
+				A7D8BED025A8592E00CB8DA8 /* on-finished in Resources */,
+				A7D8BEC925A8592E00CB8DA8 /* component-emitter in Resources */,
+				A7D8BEB525A8592E00CB8DA8 /* cookie-signature in Resources */,
+				A7D8BEC725A8592E00CB8DA8 /* parseurl in Resources */,
+				A7D8BED625A8592E00CB8DA8 /* index.js in Resources */,
+				A7D8BE8625A8592E00CB8DA8 /* test-redirect-307.js in Resources */,
+				A7D8BED725A8592E00CB8DA8 /* package.json in Resources */,
+				A7D8BEA025A8592E00CB8DA8 /* utf8 in Resources */,
+				A7D8BE8825A8592E00CB8DA8 /* testdata.txt in Resources */,
+				A7D8BE9625A8592E00CB8DA8 /* parseqs in Resources */,
+				A7D8BE7D25A8592E00CB8DA8 /* benchmark.js in Resources */,
+				A7D8BEC325A8592E00CB8DA8 /* base64id in Resources */,
+				A7D8BE8B25A8592E00CB8DA8 /* test-constants.js in Resources */,
+				A7D8BEBE25A8592E00CB8DA8 /* ipaddr.js in Resources */,
+				A7D8BE8F25A8592E00CB8DA8 /* package.json in Resources */,
+				A7D8BEBA25A8592E00CB8DA8 /* better-assert in Resources */,
+				A7D8BE9B25A8592E00CB8DA8 /* methods in Resources */,
+				A7D8BED325A8592E00CB8DA8 /* media-typer in Resources */,
+				A7D8BE8E25A8592E00CB8DA8 /* README.md in Resources */,
+				A7D8BEBF25A8592E00CB8DA8 /* cookie in Resources */,
 				A70B29B625A2F0DA00A2B37D /* LaunchScreen.storyboard in Resources */,
+				A7D8BE9025A8592E00CB8DA8 /* lib in Resources */,
+				A7D8BEB125A8592E00CB8DA8 /* base64-arraybuffer in Resources */,
+				A7D8BEC625A8592E00CB8DA8 /* component-bind in Resources */,
+				A7D8BECA25A8592E00CB8DA8 /* isarray in Resources */,
+				A7D8BECB25A8592E00CB8DA8 /* send in Resources */,
+				A7D8BEBD25A8592E00CB8DA8 /* engine.io-parser in Resources */,
+				A7D8BEA425A8592E00CB8DA8 /* socket.io-adapter in Resources */,
+				A7D8BEB925A8592E00CB8DA8 /* serve-static in Resources */,
+				A7D8BE8325A8592E00CB8DA8 /* demo.js in Resources */,
+				A7D8BED225A8592E00CB8DA8 /* debug in Resources */,
 				A70B29B325A2F0DA00A2B37D /* Assets.xcassets in Resources */,
+				A7D8BED525A8592E00CB8DA8 /* indexof in Resources */,
+				A7D8BEBB25A8592E00CB8DA8 /* json3 in Resources */,
+				A7D8BEA725A8592E00CB8DA8 /* socket.io-client in Resources */,
+				A7D8BE8925A8592E00CB8DA8 /* test-request-methods.js in Resources */,
+				A7D8BE7E25A8592E00CB8DA8 /* README.md in Resources */,
+				A7D8BEC525A8592E00CB8DA8 /* engine.io in Resources */,
+				A7D8BE8225A8592E00CB8DA8 /* LICENSE in Resources */,
+				A7D8BEB625A8592E00CB8DA8 /* forwarded in Resources */,
+				A7D8BE9A25A8592E00CB8DA8 /* content-disposition in Resources */,
+				A7D8BE9825A8592E00CB8DA8 /* ms in Resources */,
+				A7D8BE7C25A8592E00CB8DA8 /* run-test.sh in Resources */,
+				A7D8BE9225A8592E00CB8DA8 /* to-array in Resources */,
+				A7D8BEB325A8592E00CB8DA8 /* accepts in Resources */,
+				A7D8BEAA25A8592E00CB8DA8 /* fresh in Resources */,
+				A7D8BEC125A8592E00CB8DA8 /* socket.io-parser in Resources */,
+				A7D8BEC225A8592E00CB8DA8 /* after in Resources */,
+				A7D8BEC825A8592E00CB8DA8 /* etag in Resources */,
+				A7D8BECE25A8592E00CB8DA8 /* has-binary in Resources */,
+				A7D8BEB025A8592E00CB8DA8 /* vary in Resources */,
+				A7D8BEBC25A8592E00CB8DA8 /* mime in Resources */,
+				A7D8BE8025A8592E00CB8DA8 /* README.md in Resources */,
+				A7D8BEB825A8592E00CB8DA8 /* utils-merge in Resources */,
+				A7D8BE7B25A8592E00CB8DA8 /* test.js in Resources */,
+				A7D8BE8525A8592E00CB8DA8 /* test-redirect-303.js in Resources */,
+				A7D8BE8125A8592E00CB8DA8 /* LICENSE.txt in Resources */,
+				A7D8BEC025A8592E00CB8DA8 /* has-cors in Resources */,
+				A7D8BE9D25A8592E00CB8DA8 /* proxy-addr in Resources */,
+				A7D8BE8D25A8592E00CB8DA8 /* test-headers.js in Resources */,
+				A7D8BE9C25A8592E00CB8DA8 /* ultron in Resources */,
+				A7D8BEA925A8592E00CB8DA8 /* crc in Resources */,
+				A7D8BE9F25A8592E00CB8DA8 /* range-parser in Resources */,
+				A7D8BEB425A8592E00CB8DA8 /* socket.io in Resources */,
+				A7D8BE9525A8592E00CB8DA8 /* options in Resources */,
 				A70B29B125A2F0D900A2B37D /* Main.storyboard in Resources */,
+				A7D8BEAD25A8592E00CB8DA8 /* component-inherit in Resources */,
+				A7D8BEA125A8592E00CB8DA8 /* express in Resources */,
+				A7D8BE8A25A8592E00CB8DA8 /* test-request-protocols.js in Resources */,
+				A7D8BE9E25A8592E00CB8DA8 /* depd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
