@@ -20,8 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator.transition(to: loginScene, using: .root, animated: true)
         return true
     }
- 
-
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        SocketIOManager.shared.establishConnection()
+    }
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        SocketIOManager.shared.closeConnection()
+    }
     // MARK: UISceneSession Lifecycle
 
 //    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
