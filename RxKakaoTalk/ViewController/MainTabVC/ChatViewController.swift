@@ -32,6 +32,7 @@ class ChatViewController: UIViewController,ViewModelBindableType {
                 }
                 let image = try! Data(contentsOf: url)
                 cell.thumbNail.setImage(UIImage(data: image), for: .normal)
+                cell.layer.cornerRadius = 30
             }
             .disposed(by: rx.disposeBag)
         Observable.zip(tableView.rx.modelSelected(Friend.self),tableView.rx.itemSelected)

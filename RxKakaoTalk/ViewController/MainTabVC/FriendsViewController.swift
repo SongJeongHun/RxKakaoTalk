@@ -36,6 +36,8 @@ class FriendsViewController: UIViewController,ViewModelBindableType {
             .bind(to:tableView.rx.items(cellIdentifier: "FriendsCell",cellType: FriendsCell.self)){row,data,cell in
                 cell.name.text = data.profileNickname
                 guard let url = data.profileThumbnailImage else {
+
+                    cell.button.layer.cornerRadius = 30
                    return cell.button.setImage(#imageLiteral(resourceName: "basic"), for: .normal)
                 }
                 let image = try! Data(contentsOf: url)

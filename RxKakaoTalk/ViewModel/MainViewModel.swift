@@ -14,6 +14,7 @@ import Action
 import KakaoSDKTalk
 import RxKakaoSDKTalk
 class MainViewModel:ViewModelType{
+    lazy var name :String = ""
     lazy var myProfile = PublishSubject<String>()
     lazy var friendsList = PublishSubject<[Friend]>()
     lazy var test = PublishSubject<String>()
@@ -22,6 +23,7 @@ class MainViewModel:ViewModelType{
         TalkApi.shared.rx.profile()
             .retryWhen(Auth.shared.rx.incrementalAuthorizationRequired())
             .subscribe (onSuccess:{ (profile) in
+                self.name = profile.nickname
                 self.myProfile.onNext(profile.nickname)
             }, onError: {error in
                 print(error)
@@ -42,9 +44,8 @@ class MainViewModel:ViewModelType{
             .disposed(by: rx.disposeBag)
     }
     lazy var chattingAction:Action<Friend,Void> = {
-        print("chattingActionchattingActionchattingAction")
         return Action { friend in
-            let chattingViewModel = ChattingViewModel(friend: friend, sceneCoordinator: self.sceneCoordinator)
+            let chattingViewModel = ChattingViewModel(friend: friend, sceneCoordinator: self.sceneCoordinator, myName: self.name)
             let chattingScene = Scene.chat(chattingViewModel)
             return self.sceneCoordinator.transition(to: chattingScene, using: .push, animated: true).asObservable().map{_ in }
         }

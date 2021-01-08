@@ -15,6 +15,7 @@ class ChattingViewController: UIViewController,ViewModelBindableType{
     @IBOutlet weak var tableView:UITableView!
     override func viewDidLoad() {
         setTableView()
+        print(viewModel.myName)
         super.viewDidLoad()
     }
     func setTableView(){
@@ -27,11 +28,20 @@ class ChattingViewController: UIViewController,ViewModelBindableType{
             .bind(to: navigationItem.rx.title)
             .disposed(by: rx.disposeBag)
         viewModel.getChatList()
-            .bind(to:tableView.rx.items(cellIdentifier: "MyCell",cellType: MyCell.self)){row,data,cell in
-                cell.content.text = data.content
-                cell.content.layer.zPosition = 100
-                cell.view.layer.zPosition = 0
-                
+            .bind(to:tableView.rx.items){tableView,row,data in
+                if(self.viewModel.isMine(at: row)){
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! MyCell
+                    cell.content.text = data.content
+                    cell.content.layer.zPosition = 1
+                    cell.view.layer.zPosition = 0
+                    return cell
+                }else{
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "YourCell") as! MyCell
+                    cell.content.text = data.content
+                    cell.content.layer.zPosition = 1
+                    cell.view.layer.zPosition = 0
+                    return cell
+                }   
             }
             .disposed(by: rx.disposeBag)
     }
