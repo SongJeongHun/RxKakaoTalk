@@ -17,14 +17,10 @@ class FriendsViewController: UIViewController,ViewModelBindableType {
     @IBOutlet weak var mythumbnail:UIButton!
     @IBOutlet weak var friendsCount:UILabel!
     override func viewDidLoad() {
-        viewModel.getMyID()
         tableView.separatorStyle = .none
         super.viewDidLoad()
     }
     func bindViewModel() {
-        print("friendview바인딩")
-        viewModel.getFriendsList()
-        print("friendsList바인딩 완료")
         viewModel.myProfile
             .bind(to:myName.rx.text)
             .disposed(by: rx.disposeBag)
@@ -38,7 +34,6 @@ class FriendsViewController: UIViewController,ViewModelBindableType {
             .bind(to:tableView.rx.items(cellIdentifier: "FriendsCell",cellType: FriendsCell.self)){row,data,cell in
                 cell.name.text = data.profileNickname
                 guard let url = data.profileThumbnailImage else {
-
                     cell.button.layer.cornerRadius = 30
                    return cell.button.setImage(#imageLiteral(resourceName: "basic"), for: .normal)
                 }

@@ -13,7 +13,7 @@ class SocketIOManager:NSObject{
         super.init()
         socket = self.manager.socket(forNamespace: "/")
     }
-    var manager = SocketManager(socketURL: URL(string: "http://169.254.139.177:3000")!)
+    var manager = SocketManager(socketURL: URL(string: "http://192.168.25.27:3000")!)
     var socket : SocketIOClient!
     func establishConnection(){
         socket.connect()

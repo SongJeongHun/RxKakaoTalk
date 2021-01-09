@@ -17,43 +17,52 @@ import RxKakaoSDKUser
 import KakaoSDKUser
 class MainViewModel:ViewModelType{
     var name :String = ""
-    var myID = PublishSubject<String>()
+    var myID:String = ""
+    var friendList:[Friend] = []
     var myProfile = PublishSubject<String>()
     var friendsList = PublishSubject<[Friend]>()
     var test = PublishSubject<String>()
     var mythumbNail = PublishSubject<URL?>()
-    func getMyID(){
+    func getMyID() -> Completable{
+        let subject = PublishSubject<Void>()
         UserApi.shared.rx.me()
-            .subscribe { (data) in
-                self.myID.onNext(String(data.id))
-            }
-            .disposed(by: rx.disposeBag)
+            .subscribe(onSuccess:{ (data) in
+                self.myID = String(data.id)
+                print("id끝!")
+                subject.onCompleted()
+            })
+        return subject.ignoreElements()
     }
-    func getProfile(){
+    func getProfile() -> Completable{
+        let subject = PublishSubject<Void>()
         TalkApi.shared.rx.profile()
             .retryWhen(Auth.shared.rx.incrementalAuthorizationRequired())
             .subscribe (onSuccess:{ (profile) in
                 self.name = profile.nickname
                 self.myProfile.onNext(profile.nickname)
+                subject.onCompleted()
             }, onError: {error in
-                print(error)
+                subject.onError(error)
             })
-            .disposed(by: rx.disposeBag)
+        return subject.ignoreElements()
+
     }
-    func getFriendsList(){
+    func getFriendsList() -> Completable{
+        let subject = PublishSubject<Void>()
         TalkApi.shared.rx.friends()
             .retryWhen(Auth.shared.rx.incrementalAuthorizationRequired())
             .subscribe (onSuccess:{ (friends) in
                 if let friend = friends.elements{
                     self.friendsList.onNext(friend)
+                    self.friendList.append(contentsOf: friend)
                     self.test.onNext(String(friend.count))
-                    self.friendsList.onCompleted()
-                    print()
+                    print("리스트끝!")
+                    subject.onCompleted()
                 }
             }, onError: {error in
-                print(error)
+                subject.onError(error)
             })
-            .disposed(by: rx.disposeBag)
+        return subject.ignoreElements()
     }
     lazy var chattingAction:Action<Friend,Void> = {
         return Action { friend in
@@ -66,8 +75,8 @@ class MainViewModel:ViewModelType{
 extension MainViewModel{
     func socketConnection() -> Observable<String>{
         let stringSubject = PublishSubject<String>()
-        myID.subscribe(onNext:{myName in
-            SocketIOManager.shared.connectToName(name: myName)
+            print("소켓구독시작")
+        SocketIOManager.shared.connectToName(name: self.myID)
                 .subscribe(onNext:{data in
                     print(data)
                     for userList in data{
@@ -78,8 +87,6 @@ extension MainViewModel{
                     }
                 })
                 .disposed(by: self.rx.disposeBag)
-        })
-        .disposed(by: rx.disposeBag)
         return stringSubject
     }
 }
