@@ -132,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				A7D8BED925A859A300CB8DA8 /* Socket */,
-				A7D8BE1525A8592300CB8DA8 /* Server */,
 				A762058425A5BECF006CBCA2 /* Chat.swift */,
 				A762058725A5BEF4006CBCA2 /* ChatType.swift */,
 			);
@@ -184,14 +183,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		A7D8BE1525A8592300CB8DA8 /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				A7D8BE1625A8592E00CB8DA8 /* SocketServer */,
-			);
-			path = Server;
-			sourceTree = "<group>";
-		};
 		A7D8BE1625A8592E00CB8DA8 /* SocketServer */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +195,7 @@
 		A7D8BED925A859A300CB8DA8 /* Socket */ = {
 			isa = PBXGroup;
 			children = (
+				A7D8BE1625A8592E00CB8DA8 /* SocketServer */,
 				A7D8BEDA25A859AE00CB8DA8 /* SocketManager.swift */,
 			);
 			path = Socket;
