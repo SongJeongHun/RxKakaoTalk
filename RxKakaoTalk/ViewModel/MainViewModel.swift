@@ -13,12 +13,22 @@ import NSObject_Rx
 import Action
 import KakaoSDKTalk
 import RxKakaoSDKTalk
+import RxKakaoSDKUser
+import KakaoSDKUser
 class MainViewModel:ViewModelType{
     var name :String = ""
-    lazy var myProfile = PublishSubject<String>()
-    lazy var friendsList = PublishSubject<[Friend]>()
-    lazy var test = PublishSubject<String>()
-    lazy var mythumbNail = PublishSubject<URL?>()
+    var myID = PublishSubject<String>()
+    var myProfile = PublishSubject<String>()
+    var friendsList = PublishSubject<[Friend]>()
+    var test = PublishSubject<String>()
+    var mythumbNail = PublishSubject<URL?>()
+    func getMyID(){
+        UserApi.shared.rx.me()
+            .subscribe { (data) in
+                self.myID.onNext(String(data.id))
+            }
+            .disposed(by: rx.disposeBag)
+    }
     func getProfile(){
         TalkApi.shared.rx.profile()
             .retryWhen(Auth.shared.rx.incrementalAuthorizationRequired())
@@ -37,6 +47,8 @@ class MainViewModel:ViewModelType{
                 if let friend = friends.elements{
                     self.friendsList.onNext(friend)
                     self.test.onNext(String(friend.count))
+                    self.friendsList.onCompleted()
+                    print()
                 }
             }, onError: {error in
                 print(error)
@@ -54,18 +66,19 @@ class MainViewModel:ViewModelType{
 extension MainViewModel{
     func socketConnection() -> Observable<String>{
         let stringSubject = PublishSubject<String>()
-        myProfile.subscribe(onNext:{myName in
-                SocketIOManager.shared.connectToName(name: myName)
-                    .subscribe(onNext:{data in
-                        for userList in data{
-                            let user = userList as! [String:Any]
-                            if(user["isConnected"] as! Int == 1){
-                                stringSubject.onNext(user["nickname"] as! String)
-                            }
+        myID.subscribe(onNext:{myName in
+            SocketIOManager.shared.connectToName(name: myName)
+                .subscribe(onNext:{data in
+                    print(data)
+                    for userList in data{
+                        let user = userList as! [String:Any]
+                        if(user["isConnected"] as! Int == 1){
+                            stringSubject.onNext(user["nickname"] as! String)
                         }
-                    })
-                    .disposed(by: self.rx.disposeBag)
-            })
+                    }
+                })
+                .disposed(by: self.rx.disposeBag)
+        })
         .disposed(by: rx.disposeBag)
         return stringSubject
     }
