@@ -31,9 +31,4 @@ class ChattingViewModel:ViewModelType{
         return false
     }
 }
-extension ChattingViewModel{
-    func socketConnection() -> Observable<[Any]>{
-       return SocketIOManager.shared.connectToName(name: self.myName)
-    }
-}
 

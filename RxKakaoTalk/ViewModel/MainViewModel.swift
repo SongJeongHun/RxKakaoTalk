@@ -14,7 +14,7 @@ import Action
 import KakaoSDKTalk
 import RxKakaoSDKTalk
 class MainViewModel:ViewModelType{
-    lazy var name :String = ""
+    var name :String = ""
     lazy var myProfile = PublishSubject<String>()
     lazy var friendsList = PublishSubject<[Friend]>()
     lazy var test = PublishSubject<String>()
@@ -50,4 +50,23 @@ class MainViewModel:ViewModelType{
             return self.sceneCoordinator.transition(to: chattingScene, using: .push, animated: true).asObservable().map{_ in }
         }
     }()
+}
+extension MainViewModel{
+    func socketConnection() -> Observable<String>{
+        let stringSubject = PublishSubject<String>()
+        myProfile.subscribe(onNext:{myName in
+                SocketIOManager.shared.connectToName(name: myName)
+                    .subscribe(onNext:{data in
+                        for userList in data{
+                            let user = userList as! [String:Any]
+                            if(user["isConnected"] as! Int == 1){
+                                stringSubject.onNext(user["nickname"] as! String)
+                            }
+                        }
+                    })
+                    .disposed(by: self.rx.disposeBag)
+            })
+        .disposed(by: rx.disposeBag)
+        return stringSubject
+    }
 }

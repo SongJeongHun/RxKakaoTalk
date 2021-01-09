@@ -14,11 +14,6 @@ class ChattingViewController: UIViewController,ViewModelBindableType{
     var viewModel:ChattingViewModel!
     @IBOutlet weak var tableView:UITableView!
     override func viewDidLoad() {
-        viewModel.socketConnection()
-            .subscribe(onNext:{data in
-                print(data)
-            })
-            .disposed(by: rx.disposeBag)
         setTableView()
         super.viewDidLoad()
     }

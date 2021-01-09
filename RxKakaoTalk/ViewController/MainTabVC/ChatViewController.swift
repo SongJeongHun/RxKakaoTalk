@@ -16,10 +16,10 @@ class ChatViewController: UIViewController,ViewModelBindableType {
     var viewModel:  MainViewModel!
     @IBOutlet weak var tableView:UITableView!
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
     }
     override func viewDidLoad() {
+        socketConnecting()
         tableView.separatorStyle = .none
         super.viewDidLoad()
     }
@@ -35,12 +35,22 @@ class ChatViewController: UIViewController,ViewModelBindableType {
                 cell.layer.cornerRadius = 30
             }
             .disposed(by: rx.disposeBag)
+        bindTapAction()
+    }
+    func bindTapAction(){
         Observable.zip(tableView.rx.modelSelected(Friend.self),tableView.rx.itemSelected)
             .do(onNext:{[unowned self]_,row in
             self.tableView.deselectRow(at: row, animated: false)
         })
             .map{$0.0}
             .bind(to:viewModel.chattingAction.inputs)
+            .disposed(by: rx.disposeBag)
+    }
+    func socketConnecting(){
+        viewModel.socketConnection()
+            .subscribe(onNext:{data in
+                print(data)
+            })
             .disposed(by: rx.disposeBag)
     }
 }

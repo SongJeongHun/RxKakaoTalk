@@ -22,7 +22,6 @@ class FriendsViewController: UIViewController,ViewModelBindableType {
     }
     func bindViewModel() {
         viewModel.getFriendsList()
-        viewModel.getProfile()
         viewModel.myProfile
             .bind(to:myName.rx.text)
             .disposed(by: rx.disposeBag)

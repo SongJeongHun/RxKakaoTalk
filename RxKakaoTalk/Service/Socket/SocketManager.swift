@@ -13,7 +13,7 @@ class SocketIOManager:NSObject{
         super.init()
         socket = self.manager.socket(forNamespace: "/")
     }
-    var manager = SocketManager(socketURL: URL(string: "http://169.254.60.172:3000")!)
+    var manager = SocketManager(socketURL: URL(string: "http://169.254.206.102:3000")!)
     var socket : SocketIOClient!
     func establishConnection(){
         socket.connect()
@@ -25,8 +25,9 @@ class SocketIOManager:NSObject{
         let subject = PublishSubject<[Any]>()
         socket.emit("connectUser",name)
         socket.on("userList"){data,_ in
-            subject.onNext(data)
+            subject.onNext(data[0] as! [[String:Any]])
         }
         return subject
     }
 }
+
