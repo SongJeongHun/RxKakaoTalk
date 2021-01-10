@@ -12,6 +12,8 @@ import KakaoSDKTalk
 import Action
 class ChattingViewController: UIViewController,ViewModelBindableType{
     var viewModel:ChattingViewModel!
+    @IBOutlet weak var messageContent:UITextField!
+    @IBOutlet weak var sendButton:UIButton!
     @IBOutlet weak var tableView:UITableView!
     override func viewDidLoad() {
         setTableView()
@@ -26,7 +28,7 @@ class ChattingViewController: UIViewController,ViewModelBindableType{
         Observable.just(viewModel.friend.profileNickname)
             .bind(to: navigationItem.rx.title)
             .disposed(by: rx.disposeBag)
-        viewModel.getChatList()
+        viewModel.store
             .bind(to:tableView.rx.items){tableView,row,data in
                 if(self.viewModel.isMine(at: row)){
                     let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! MyCell
@@ -43,6 +45,10 @@ class ChattingViewController: UIViewController,ViewModelBindableType{
                 }   
             }
             .disposed(by: rx.disposeBag)
+        sendButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .withLatestFrom(messageContent.rx.text.orEmpty)
+            .bind(to: viewModel.sendAction.inputs)
     }
 }
 extension ChattingViewController:UITableViewDelegate{

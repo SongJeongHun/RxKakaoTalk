@@ -17,20 +17,19 @@ class ChatViewController: UIViewController,ViewModelBindableType {
     var viewModel:  MainViewModel!
     @IBOutlet weak var tableView:UITableView!
     override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
         super.viewWillAppear(animated)
     }
     override func viewDidLoad() {
         viewModel.getFriendsList()
             .concat(viewModel.getMyID())
             .subscribe(onCompleted: {
-                print("socket시작")
                 self.socketConnecting()
             })
         tableView.separatorStyle = .none
         super.viewDidLoad()
     }
     func bindViewModel() {
-        print("chatview바인디")
         viewModel.friendsList
             .bind(to:tableView.rx.items(cellIdentifier: "chatCell",cellType: chatCell.self)){row,data,cell in
                 cell.isOnline.tintColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
@@ -65,7 +64,6 @@ class ChatViewController: UIViewController,ViewModelBindableType {
                     let indexPath = IndexPath(row: index, section: 0)
                     guard let cell = self.tableView.cellForRow(at: indexPath) as? chatCell else { return }
                     cell.isOnline.tintColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-                    print("끄기")
                 }
             })
             .disposed(by: self.rx.disposeBag)

@@ -16,7 +16,7 @@
 		A70B29B625A2F0DA00A2B37D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70B29B425A2F0DA00A2B37D /* LaunchScreen.storyboard */; };
 		A762057725A58C31006CBCA2 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762057625A58C31006CBCA2 /* ChattingViewController.swift */; };
 		A762058225A593DA006CBCA2 /* ChattingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762058125A593DA006CBCA2 /* ChattingViewModel.swift */; };
-		A762058525A5BECF006CBCA2 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762058425A5BECF006CBCA2 /* Chat.swift */; };
+		A762058525A5BECF006CBCA2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762058425A5BECF006CBCA2 /* Message.swift */; };
 		A762058825A5BEF4006CBCA2 /* ChatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762058725A5BEF4006CBCA2 /* ChatType.swift */; };
 		A76CC18425A30C4500B8EEAA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76CC18325A30C4500B8EEAA /* LoginViewModel.swift */; };
 		A76CC18A25A30CBF00B8EEAA /* ViewControllerBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */; };
@@ -47,7 +47,7 @@
 		A70B29B725A2F0DA00A2B37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A762057625A58C31006CBCA2 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		A762058125A593DA006CBCA2 /* ChattingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewModel.swift; sourceTree = "<group>"; };
-		A762058425A5BECF006CBCA2 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		A762058425A5BECF006CBCA2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A762058725A5BEF4006CBCA2 /* ChatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatType.swift; sourceTree = "<group>"; };
 		A76CC18325A30C4500B8EEAA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A76CC18925A30CBF00B8EEAA /* ViewControllerBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBindableType.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				A7D8BED925A859A300CB8DA8 /* Socket */,
-				A762058425A5BECF006CBCA2 /* Chat.swift */,
+				A762058425A5BECF006CBCA2 /* Message.swift */,
 				A762058725A5BEF4006CBCA2 /* ChatType.swift */,
 			);
 			path = Service;
@@ -319,7 +319,7 @@
 			files = (
 				A762058225A593DA006CBCA2 /* ChattingViewModel.swift in Sources */,
 				A7BA8E7325A2F362005F0F27 /* Scene.swift in Sources */,
-				A762058525A5BECF006CBCA2 /* Chat.swift in Sources */,
+				A762058525A5BECF006CBCA2 /* Message.swift in Sources */,
 				A77F0DAB25A464C600779FED /* FriendsViewController.swift in Sources */,
 				A77F0DAE25A464D000779FED /* ChatViewController.swift in Sources */,
 				A77F0D7625A421A300779FED /* MainViewModel.swift in Sources */,

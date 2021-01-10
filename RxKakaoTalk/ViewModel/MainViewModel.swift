@@ -28,7 +28,6 @@ class MainViewModel:ViewModelType{
         UserApi.shared.rx.me()
             .subscribe(onSuccess:{ (data) in
                 self.myID = String(data.id)
-                print("id끝!")
                 subject.onCompleted()
             })
         return subject.ignoreElements()
@@ -56,7 +55,6 @@ class MainViewModel:ViewModelType{
                     self.friendsList.onNext(friend)
                     self.friendList.append(contentsOf: friend)
                     self.test.onNext(String(friend.count))
-                    print("리스트끝!")
                     subject.onCompleted()
                 }
             }, onError: {error in
@@ -75,13 +73,13 @@ class MainViewModel:ViewModelType{
 extension MainViewModel{
     func socketConnection() -> Observable<String>{
         let stringSubject = PublishSubject<String>()
-            print("소켓구독시작")
         SocketIOManager.shared.connectToName(name: self.myID)
                 .subscribe(onNext:{data in
                     print(data)
                     for userList in data{
+                        print(userList)
                         let user = userList as! [String:Any]
-                        if(user["isConnected"] as! Int == 1){
+                        if((user["isConnected"] as! Int) == 1){
                             stringSubject.onNext(user["nickname"] as! String)
                         }
                     }

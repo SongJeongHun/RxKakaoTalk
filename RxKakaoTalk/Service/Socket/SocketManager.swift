@@ -13,7 +13,7 @@ class SocketIOManager:NSObject{
         super.init()
         socket = self.manager.socket(forNamespace: "/")
     }
-    var manager = SocketManager(socketURL: URL(string: "http://192.168.25.27:3000")!)
+    var manager = SocketManager(socketURL: URL(string: "http://169.254.232.33:3000")!)
     var socket : SocketIOClient!
     func establishConnection(){
         socket.connect()
@@ -28,5 +28,23 @@ class SocketIOManager:NSObject{
             subject.onNext(data[0] as! [[String:Any]])
         }
         return subject
+    }
+    func disConnectToName(name:String){
+        socket.emit("exitUser",name)
+    }
+    func sendMessage(msg:Message,with name:String){
+        socket.emit("chatMessage",name,msg.content)
+    }
+    func getMessage(name:String) -> Observable<[Any]>{
+        let subject = PublishSubject<[Any]>()
+        socket.on("newChatMessage"){data,_ in
+            var messageData = [String:Any]()
+            messageData["nickname"] = data[0] as! String
+            messageData["message"] = data[1] as! String
+            messageData["date"] = data[2] as! String
+            subject.onNext(messageData as! [[String:Any]])
+        }
+        return subject
+        
     }
 }

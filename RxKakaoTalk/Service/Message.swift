@@ -24,11 +24,11 @@ struct Message{
     var sender:String
     var content:String
     var receiver:String
-    var timeStamp:String
-    init(sender:String,content:String,receiver:String,timeStamp:String){
+    
+    init(sender:String,content:String,receiver:String){
         self.sender = sender
         self.content = content
         self.receiver = receiver
-        self.timeStamp = timeStamp
+        
     }
 }
