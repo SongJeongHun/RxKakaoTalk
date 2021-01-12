@@ -15,6 +15,9 @@ class ChattingViewController: UIViewController,ViewModelBindableType{
     @IBOutlet weak var messageContent:UITextField!
     @IBOutlet weak var sendButton:UIButton!
     @IBOutlet weak var tableView:UITableView!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func viewDidLoad() {
         setTableView()
         super.viewDidLoad()
@@ -28,7 +31,7 @@ class ChattingViewController: UIViewController,ViewModelBindableType{
         Observable.just(viewModel.friend.profileNickname)
             .bind(to: navigationItem.rx.title)
             .disposed(by: rx.disposeBag)
-        viewModel.store
+        viewModel.listenMyMessage()
             .bind(to:tableView.rx.items){tableView,row,data in
                 if(self.viewModel.isMine(at: row)){
                     let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! MyCell

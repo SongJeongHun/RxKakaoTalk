@@ -64,7 +64,7 @@ class MainViewModel:ViewModelType{
     }
     lazy var chattingAction:Action<Friend,Void> = {
         return Action { friend in
-            let chattingViewModel = ChattingViewModel(friend: friend, sceneCoordinator: self.sceneCoordinator, myName: self.name)
+            let chattingViewModel = ChattingViewModel(friend: friend, sceneCoordinator: self.sceneCoordinator, myName: self.name,myID: self.myID)
             let chattingScene = Scene.chat(chattingViewModel)
             return self.sceneCoordinator.transition(to: chattingScene, using: .push, animated: true).asObservable().map{_ in }
         }
@@ -75,9 +75,7 @@ extension MainViewModel{
         let stringSubject = PublishSubject<String>()
         SocketIOManager.shared.connectToName(name: self.myID)
                 .subscribe(onNext:{data in
-                    print(data)
                     for userList in data{
-                        print(userList)
                         let user = userList as! [String:Any]
                         if((user["isConnected"] as! Int) == 1){
                             stringSubject.onNext(user["nickname"] as! String)

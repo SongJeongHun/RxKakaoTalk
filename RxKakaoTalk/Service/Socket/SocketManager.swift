@@ -6,14 +6,13 @@
 import Foundation
 import SocketIO
 import RxSwift
-import UIKit
 class SocketIOManager:NSObject{
     static let shared = SocketIOManager()
     override init() {
         super.init()
         socket = self.manager.socket(forNamespace: "/")
     }
-    var manager = SocketManager(socketURL: URL(string: "http://169.254.232.33:3000")!)
+    var manager = SocketManager(socketURL: URL(string: "http://172.30.1.6:3000")!)
     var socket : SocketIOClient!
     func establishConnection(){
         socket.connect()
@@ -32,19 +31,15 @@ class SocketIOManager:NSObject{
     func disConnectToName(name:String){
         socket.emit("exitUser",name)
     }
-    func sendMessage(msg:Message,with name:String){
-        socket.emit("chatMessage",name,msg.content)
+    func sendMessage(msg:Message){
+        socket.emit("chatMessage",msg.sender,msg.content,msg.receiver)
     }
-    func getMessage(name:String) -> Observable<[Any]>{
-        let subject = PublishSubject<[Any]>()
+    func getMessage() -> Observable<Message>{
+        let subject = PublishSubject<Message>()
         socket.on("newChatMessage"){data,_ in
-            var messageData = [String:Any]()
-            messageData["nickname"] = data[0] as! String
-            messageData["message"] = data[1] as! String
-            messageData["date"] = data[2] as! String
-            subject.onNext(messageData as! [[String:Any]])
+            var messageData = Message(sender: data[0] as! String, content: data[1] as! String, receiver: data[3] as! String)
+            subject.onNext(messageData)
         }
         return subject
-        
     }
 }
