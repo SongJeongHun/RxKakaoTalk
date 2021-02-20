@@ -14,9 +14,7 @@ class ChattingViewModel:ViewModelType{
     let friend:Friend
     let myName:String
     let myID:String
-    var dummyList : [Message] = []
-    lazy var store = BehaviorSubject<[Message]>(value: dummyList)
-    //    var contents:Observable<[Message]>!
+    var store : [Message] = []
     init(friend:Friend,sceneCoordinator:SceneCoordinatorType,myName:String,myID:String){
         self.myName = myName
         self.friend = friend
@@ -24,7 +22,7 @@ class ChattingViewModel:ViewModelType{
         super.init(sceneCoordinator: sceneCoordinator)
     }
     func isMine(at row:Int) -> Bool{
-        if (dummyList[row].sender == myID){
+        if (store[row].sender == myID){
             return true
         }
         return false
@@ -35,13 +33,12 @@ class ChattingViewModel:ViewModelType{
         return Observable.empty()
     }
     func listenMyMessage() -> Observable<[Message]>{
-        let subject = BehaviorSubject<[Message]>(value: self.dummyList)
+        let subject = BehaviorSubject<[Message]>(value: self.store)
         SocketIOManager.shared.getMessage()
             .subscribe(onNext:{data in
-                print(data)
                 if data.sender == self.myID || data.receiver == self.myID{
-                    self.dummyList.append(data)
-                    subject.onNext(self.dummyList)
+                    self.store.append(data)
+                    subject.onNext(self.store)
                 }
             },onError: { error in
                 subject.onError(error)

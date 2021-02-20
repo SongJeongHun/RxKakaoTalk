@@ -31,7 +31,6 @@ class SceneCoordinator:SceneCoordinatorType{
             subject.onCompleted()
 //        case .modal:
         case .push:
-            print(currentVC)
             guard let nav = currentVC.children.last as? UINavigationController else{
                 subject.onError(TransitionError.navigationControllerMissing)
                 break

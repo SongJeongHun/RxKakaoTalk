@@ -13,7 +13,6 @@ import Action
 import KakaoSDKTalk
 import RxKakaoSDKTalk
 class ChatViewController: UIViewController,ViewModelBindableType {
-    
     var viewModel:  MainViewModel!
     @IBOutlet weak var tableView:UITableView!
     override func viewWillAppear(_ animated: Bool) {

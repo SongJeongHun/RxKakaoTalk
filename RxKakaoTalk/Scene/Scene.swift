@@ -19,11 +19,10 @@ extension Scene{
         case .main(let mainviewModel):
             guard var mainVC = storyboard.instantiateViewController(identifier:"Main") as? UITabBarController else { fatalError() }
             guard var friendsVC = mainVC.viewControllers?.first as? FriendsViewController else { fatalError() }
-            guard var chatNav = mainVC.viewControllers?.last as? UINavigationController else { fatalError() }
+            guard var chatNav = mainVC.viewControllers?.last as? UINavigationController else { fatalError( ) }
             guard var chatVC = chatNav.viewControllers.first as? ChatViewController else { fatalError() }
             chatVC.bind(viewModel: mainviewModel)
             friendsVC.bind(viewModel: mainviewModel)
-            
             return mainVC
         case.login(let viewModel):
             guard var loginVC = storyboard.instantiateViewController(identifier: "Login") as? LoginViewController else { fatalError() }
